@@ -25,3 +25,4 @@ services:
     rootDir: frontend
     staticPublishPath: .
     buildCommand: ""
+    plan: free
