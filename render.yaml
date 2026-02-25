@@ -14,9 +14,8 @@ services:
       - key: BULK_CONCURRENCY
         value: "3"
       - key: FRONTEND_ORIGIN
-        value: https://persona-frontend.onrender.com  # デプロイ後に変更
+        value: https://persona-frontend.onrender.com
     healthCheckPath: /api/usage
-    plan: free
 
   # ── フロントエンド: Static Site ───────────────────────────────────
   - type: web
@@ -24,13 +23,4 @@ services:
     runtime: static
     rootDir: frontend
     staticPublishPath: .
-    buildCommand: ""         # ビルド不要（純粋な静的ファイル）
-    plan: free
-    headers:
-      - path: /*
-        name: Cache-Control
-        value: no-cache
-    routes:
-      - type: rewrite
-        source: /*
-        destination: /index.html
+    buildCommand: ""
