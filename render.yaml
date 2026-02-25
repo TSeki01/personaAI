@@ -15,7 +15,7 @@ services:
       - key: BULK_CONCURRENCY
         value: "3"
       - key: FRONTEND_ORIGIN
-        value: https://persona-frontend.onrender.com
+        value: https://persona-frontend-5kws.onrender.com
     healthCheckPath: /api/usage
     plan: free
 
