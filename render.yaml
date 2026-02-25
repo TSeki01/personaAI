@@ -16,6 +16,7 @@ services:
       - key: FRONTEND_ORIGIN
         value: https://persona-frontend.onrender.com
     healthCheckPath: /api/usage
+    plan: free
 
   # ── フロントエンド: Static Site ───────────────────────────────────
   - type: web
