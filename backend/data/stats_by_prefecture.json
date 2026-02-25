@@ -1,0 +1,2211 @@
+{
+  "北海道": {
+    "region": "北海道",
+    "avg_annual_income": 390,
+    "income_distribution": {
+      "under_200": 0.18,
+      "200_400": 0.38,
+      "400_600": 0.23,
+      "600_800": 0.08,
+      "over_800": 0.03
+    },
+    "employment_type": {
+      "regular": 0.55,
+      "part_time": 0.25,
+      "self_employed": 0.12,
+      "unemployed": 0.07
+    },
+    "age_distribution": {
+      "20s": 0.11,
+      "30s": 0.14,
+      "40s": 0.17,
+      "50s": 0.16,
+      "60s": 0.2,
+      "70plus": 0.25
+    },
+    "household_type": {
+      "single": 0.32,
+      "couple_no_kids": 0.2,
+      "couple_with_kids": 0.35,
+      "single_parent": 0.08,
+      "multi_gen": 0.06
+    },
+    "homeownership_rate": 0.62,
+    "ldp_vote_share": 0.39,
+    "opposition_vote_share": 0.46,
+    "avg_commute_minutes": 28,
+    "avg_sleep_hours": 7.4,
+    "internet_usage_rate": 0.77,
+    "avg_monthly_food": 65000,
+    "avg_monthly_housing": 55000,
+    "avg_monthly_entertainment": 25000,
+    "major_industries": [
+      "農業",
+      "観光",
+      "食品加工",
+      "公務"
+    ]
+  },
+  "青森県": {
+    "region": "東北",
+    "avg_annual_income": 320,
+    "income_distribution": {
+      "under_200": 0.2,
+      "200_400": 0.4,
+      "400_600": 0.21,
+      "600_800": 0.06,
+      "over_800": 0.03
+    },
+    "employment_type": {
+      "regular": 0.55,
+      "part_time": 0.25,
+      "self_employed": 0.12,
+      "unemployed": 0.08
+    },
+    "age_distribution": {
+      "20s": 0.11,
+      "30s": 0.13,
+      "40s": 0.17,
+      "50s": 0.16,
+      "60s": 0.2,
+      "70plus": 0.28
+    },
+    "household_type": {
+      "single": 0.28,
+      "couple_no_kids": 0.21,
+      "couple_with_kids": 0.35,
+      "single_parent": 0.08,
+      "multi_gen": 0.07
+    },
+    "homeownership_rate": 0.72,
+    "ldp_vote_share": 0.52,
+    "opposition_vote_share": 0.33,
+    "avg_commute_minutes": 22,
+    "avg_sleep_hours": 7.4,
+    "internet_usage_rate": 0.76,
+    "avg_monthly_food": 60000,
+    "avg_monthly_housing": 40000,
+    "avg_monthly_entertainment": 18000,
+    "major_industries": [
+      "農業",
+      "水産業",
+      "観光",
+      "公務"
+    ]
+  },
+  "岩手県": {
+    "region": "東北",
+    "avg_annual_income": 330,
+    "income_distribution": {
+      "under_200": 0.2,
+      "200_400": 0.4,
+      "400_600": 0.22,
+      "600_800": 0.07,
+      "over_800": 0.03
+    },
+    "employment_type": {
+      "regular": 0.55,
+      "part_time": 0.25,
+      "self_employed": 0.12,
+      "unemployed": 0.08
+    },
+    "age_distribution": {
+      "20s": 0.11,
+      "30s": 0.13,
+      "40s": 0.17,
+      "50s": 0.16,
+      "60s": 0.2,
+      "70plus": 0.27
+    },
+    "household_type": {
+      "single": 0.26,
+      "couple_no_kids": 0.21,
+      "couple_with_kids": 0.35,
+      "single_parent": 0.08,
+      "multi_gen": 0.08
+    },
+    "homeownership_rate": 0.75,
+    "ldp_vote_share": 0.55,
+    "opposition_vote_share": 0.3,
+    "avg_commute_minutes": 24,
+    "avg_sleep_hours": 7.4,
+    "internet_usage_rate": 0.76,
+    "avg_monthly_food": 61000,
+    "avg_monthly_housing": 41000,
+    "avg_monthly_entertainment": 19000,
+    "major_industries": [
+      "農業",
+      "製造業",
+      "観光",
+      "公務"
+    ]
+  },
+  "宮城県": {
+    "region": "東北",
+    "avg_annual_income": 400,
+    "income_distribution": {
+      "under_200": 0.18,
+      "200_400": 0.38,
+      "400_600": 0.23,
+      "600_800": 0.08,
+      "over_800": 0.03
+    },
+    "employment_type": {
+      "regular": 0.56,
+      "part_time": 0.25,
+      "self_employed": 0.12,
+      "unemployed": 0.07
+    },
+    "age_distribution": {
+      "20s": 0.11,
+      "30s": 0.14,
+      "40s": 0.17,
+      "50s": 0.16,
+      "60s": 0.19,
+      "70plus": 0.22
+    },
+    "household_type": {
+      "single": 0.3,
+      "couple_no_kids": 0.21,
+      "couple_with_kids": 0.35,
+      "single_parent": 0.08,
+      "multi_gen": 0.07
+    },
+    "homeownership_rate": 0.65,
+    "ldp_vote_share": 0.44,
+    "opposition_vote_share": 0.41,
+    "avg_commute_minutes": 30,
+    "avg_sleep_hours": 7.3,
+    "internet_usage_rate": 0.77,
+    "avg_monthly_food": 68000,
+    "avg_monthly_housing": 52000,
+    "avg_monthly_entertainment": 23000,
+    "major_industries": [
+      "サービス業",
+      "製造業",
+      "公務",
+      "情報通信"
+    ]
+  },
+  "秋田県": {
+    "region": "東北",
+    "avg_annual_income": 300,
+    "income_distribution": {
+      "under_200": 0.21,
+      "200_400": 0.41,
+      "400_600": 0.21,
+      "600_800": 0.06,
+      "over_800": 0.02
+    },
+    "employment_type": {
+      "regular": 0.55,
+      "part_time": 0.25,
+      "self_employed": 0.12,
+      "unemployed": 0.08
+    },
+    "age_distribution": {
+      "20s": 0.1,
+      "30s": 0.13,
+      "40s": 0.17,
+      "50s": 0.16,
+      "60s": 0.2,
+      "70plus": 0.32
+    },
+    "household_type": {
+      "single": 0.27,
+      "couple_no_kids": 0.21,
+      "couple_with_kids": 0.35,
+      "single_parent": 0.08,
+      "multi_gen": 0.08
+    },
+    "homeownership_rate": 0.76,
+    "ldp_vote_share": 0.58,
+    "opposition_vote_share": 0.27,
+    "avg_commute_minutes": 21,
+    "avg_sleep_hours": 7.4,
+    "internet_usage_rate": 0.75,
+    "avg_monthly_food": 59000,
+    "avg_monthly_housing": 38000,
+    "avg_monthly_entertainment": 17000,
+    "major_industries": [
+      "農業",
+      "製造業",
+      "公務",
+      "観光"
+    ]
+  },
+  "山形県": {
+    "region": "東北",
+    "avg_annual_income": 330,
+    "income_distribution": {
+      "under_200": 0.2,
+      "200_400": 0.4,
+      "400_600": 0.22,
+      "600_800": 0.07,
+      "over_800": 0.03
+    },
+    "employment_type": {
+      "regular": 0.55,
+      "part_time": 0.25,
+      "self_employed": 0.12,
+      "unemployed": 0.08
+    },
+    "age_distribution": {
+      "20s": 0.11,
+      "30s": 0.13,
+      "40s": 0.17,
+      "50s": 0.16,
+      "60s": 0.2,
+      "70plus": 0.27
+    },
+    "household_type": {
+      "single": 0.24,
+      "couple_no_kids": 0.21,
+      "couple_with_kids": 0.36,
+      "single_parent": 0.08,
+      "multi_gen": 0.08
+    },
+    "homeownership_rate": 0.78,
+    "ldp_vote_share": 0.57,
+    "opposition_vote_share": 0.28,
+    "avg_commute_minutes": 22,
+    "avg_sleep_hours": 7.4,
+    "internet_usage_rate": 0.76,
+    "avg_monthly_food": 62000,
+    "avg_monthly_housing": 40000,
+    "avg_monthly_entertainment": 18000,
+    "major_industries": [
+      "農業",
+      "製造業",
+      "公務",
+      "観光"
+    ]
+  },
+  "福島県": {
+    "region": "東北",
+    "avg_annual_income": 360,
+    "income_distribution": {
+      "under_200": 0.19,
+      "200_400": 0.39,
+      "400_600": 0.22,
+      "600_800": 0.07,
+      "over_800": 0.03
+    },
+    "employment_type": {
+      "regular": 0.55,
+      "part_time": 0.25,
+      "self_employed": 0.12,
+      "unemployed": 0.08
+    },
+    "age_distribution": {
+      "20s": 0.11,
+      "30s": 0.13,
+      "40s": 0.17,
+      "50s": 0.16,
+      "60s": 0.2,
+      "70plus": 0.26
+    },
+    "household_type": {
+      "single": 0.27,
+      "couple_no_kids": 0.21,
+      "couple_with_kids": 0.35,
+      "single_parent": 0.08,
+      "multi_gen": 0.07
+    },
+    "homeownership_rate": 0.72,
+    "ldp_vote_share": 0.5,
+    "opposition_vote_share": 0.35,
+    "avg_commute_minutes": 26,
+    "avg_sleep_hours": 7.4,
+    "internet_usage_rate": 0.77,
+    "avg_monthly_food": 63000,
+    "avg_monthly_housing": 45000,
+    "avg_monthly_entertainment": 20000,
+    "major_industries": [
+      "農業",
+      "製造業",
+      "公務",
+      "エネルギー"
+    ]
+  },
+  "茨城県": {
+    "region": "関東",
+    "avg_annual_income": 430,
+    "income_distribution": {
+      "under_200": 0.17,
+      "200_400": 0.37,
+      "400_600": 0.24,
+      "600_800": 0.09,
+      "over_800": 0.03
+    },
+    "employment_type": {
+      "regular": 0.56,
+      "part_time": 0.25,
+      "self_employed": 0.12,
+      "unemployed": 0.07
+    },
+    "age_distribution": {
+      "20s": 0.11,
+      "30s": 0.14,
+      "40s": 0.17,
+      "50s": 0.16,
+      "60s": 0.19,
+      "70plus": 0.23
+    },
+    "household_type": {
+      "single": 0.27,
+      "couple_no_kids": 0.21,
+      "couple_with_kids": 0.35,
+      "single_parent": 0.08,
+      "multi_gen": 0.07
+    },
+    "homeownership_rate": 0.72,
+    "ldp_vote_share": 0.47,
+    "opposition_vote_share": 0.38,
+    "avg_commute_minutes": 42,
+    "avg_sleep_hours": 7.3,
+    "internet_usage_rate": 0.78,
+    "avg_monthly_food": 70000,
+    "avg_monthly_housing": 58000,
+    "avg_monthly_entertainment": 24000,
+    "major_industries": [
+      "製造業",
+      "農業",
+      "研究機関",
+      "サービス業"
+    ]
+  },
+  "栃木県": {
+    "region": "関東",
+    "avg_annual_income": 430,
+    "income_distribution": {
+      "under_200": 0.17,
+      "200_400": 0.37,
+      "400_600": 0.24,
+      "600_800": 0.09,
+      "over_800": 0.03
+    },
+    "employment_type": {
+      "regular": 0.56,
+      "part_time": 0.25,
+      "self_employed": 0.12,
+      "unemployed": 0.07
+    },
+    "age_distribution": {
+      "20s": 0.11,
+      "30s": 0.14,
+      "40s": 0.17,
+      "50s": 0.16,
+      "60s": 0.19,
+      "70plus": 0.22
+    },
+    "household_type": {
+      "single": 0.26,
+      "couple_no_kids": 0.21,
+      "couple_with_kids": 0.35,
+      "single_parent": 0.08,
+      "multi_gen": 0.07
+    },
+    "homeownership_rate": 0.7,
+    "ldp_vote_share": 0.53,
+    "opposition_vote_share": 0.32,
+    "avg_commute_minutes": 35,
+    "avg_sleep_hours": 7.3,
+    "internet_usage_rate": 0.78,
+    "avg_monthly_food": 69000,
+    "avg_monthly_housing": 55000,
+    "avg_monthly_entertainment": 23000,
+    "major_industries": [
+      "製造業",
+      "農業",
+      "観光",
+      "サービス業"
+    ]
+  },
+  "群馬県": {
+    "region": "関東",
+    "avg_annual_income": 420,
+    "income_distribution": {
+      "under_200": 0.17,
+      "200_400": 0.37,
+      "400_600": 0.23,
+      "600_800": 0.08,
+      "over_800": 0.03
+    },
+    "employment_type": {
+      "regular": 0.56,
+      "part_time": 0.25,
+      "self_employed": 0.12,
+      "unemployed": 0.07
+    },
+    "age_distribution": {
+      "20s": 0.11,
+      "30s": 0.14,
+      "40s": 0.17,
+      "50s": 0.16,
+      "60s": 0.19,
+      "70plus": 0.23
+    },
+    "household_type": {
+      "single": 0.26,
+      "couple_no_kids": 0.21,
+      "couple_with_kids": 0.35,
+      "single_parent": 0.08,
+      "multi_gen": 0.07
+    },
+    "homeownership_rate": 0.71,
+    "ldp_vote_share": 0.52,
+    "opposition_vote_share": 0.33,
+    "avg_commute_minutes": 34,
+    "avg_sleep_hours": 7.3,
+    "internet_usage_rate": 0.78,
+    "avg_monthly_food": 68000,
+    "avg_monthly_housing": 54000,
+    "avg_monthly_entertainment": 23000,
+    "major_industries": [
+      "製造業",
+      "農業",
+      "自動車関連",
+      "サービス業"
+    ]
+  },
+  "埼玉県": {
+    "region": "関東",
+    "avg_annual_income": 490,
+    "income_distribution": {
+      "under_200": 0.15,
+      "200_400": 0.35,
+      "400_600": 0.25,
+      "600_800": 0.1,
+      "over_800": 0.04
+    },
+    "employment_type": {
+      "regular": 0.56,
+      "part_time": 0.25,
+      "self_employed": 0.12,
+      "unemployed": 0.07
+    },
+    "age_distribution": {
+      "20s": 0.11,
+      "30s": 0.14,
+      "40s": 0.17,
+      "50s": 0.16,
+      "60s": 0.19,
+      "70plus": 0.21
+    },
+    "household_type": {
+      "single": 0.29,
+      "couple_no_kids": 0.21,
+      "couple_with_kids": 0.35,
+      "single_parent": 0.08,
+      "multi_gen": 0.07
+    },
+    "homeownership_rate": 0.67,
+    "ldp_vote_share": 0.43,
+    "opposition_vote_share": 0.42,
+    "avg_commute_minutes": 52,
+    "avg_sleep_hours": 7.2,
+    "internet_usage_rate": 0.79,
+    "avg_monthly_food": 75000,
+    "avg_monthly_housing": 75000,
+    "avg_monthly_entertainment": 28000,
+    "major_industries": [
+      "製造業",
+      "サービス業",
+      "小売業",
+      "IT"
+    ]
+  },
+  "千葉県": {
+    "region": "関東",
+    "avg_annual_income": 490,
+    "income_distribution": {
+      "under_200": 0.15,
+      "200_400": 0.35,
+      "400_600": 0.25,
+      "600_800": 0.1,
+      "over_800": 0.04
+    },
+    "employment_type": {
+      "regular": 0.56,
+      "part_time": 0.25,
+      "self_employed": 0.12,
+      "unemployed": 0.07
+    },
+    "age_distribution": {
+      "20s": 0.11,
+      "30s": 0.14,
+      "40s": 0.17,
+      "50s": 0.16,
+      "60s": 0.19,
+      "70plus": 0.22
+    },
+    "household_type": {
+      "single": 0.3,
+      "couple_no_kids": 0.21,
+      "couple_with_kids": 0.35,
+      "single_parent": 0.08,
+      "multi_gen": 0.07
+    },
+    "homeownership_rate": 0.65,
+    "ldp_vote_share": 0.43,
+    "opposition_vote_share": 0.42,
+    "avg_commute_minutes": 50,
+    "avg_sleep_hours": 7.2,
+    "internet_usage_rate": 0.79,
+    "avg_monthly_food": 74000,
+    "avg_monthly_housing": 73000,
+    "avg_monthly_entertainment": 28000,
+    "major_industries": [
+      "サービス業",
+      "農業",
+      "空港関連",
+      "製造業"
+    ]
+  },
+  "東京都": {
+    "region": "関東",
+    "avg_annual_income": 620,
+    "income_distribution": {
+      "under_200": 0.11,
+      "200_400": 0.31,
+      "400_600": 0.27,
+      "600_800": 0.12,
+      "over_800": 0.05
+    },
+    "employment_type": {
+      "regular": 0.58,
+      "part_time": 0.25,
+      "self_employed": 0.12,
+      "unemployed": 0.06
+    },
+    "age_distribution": {
+      "20s": 0.12,
+      "30s": 0.14,
+      "40s": 0.17,
+      "50s": 0.16,
+      "60s": 0.19,
+      "70plus": 0.18
+    },
+    "household_type": {
+      "single": 0.47,
+      "couple_no_kids": 0.2,
+      "couple_with_kids": 0.33,
+      "single_parent": 0.08,
+      "multi_gen": 0.05
+    },
+    "homeownership_rate": 0.45,
+    "ldp_vote_share": 0.34,
+    "opposition_vote_share": 0.51,
+    "avg_commute_minutes": 43,
+    "avg_sleep_hours": 7.3,
+    "internet_usage_rate": 0.82,
+    "avg_monthly_food": 90000,
+    "avg_monthly_housing": 120000,
+    "avg_monthly_entertainment": 45000,
+    "major_industries": [
+      "金融",
+      "IT",
+      "メディア",
+      "サービス業"
+    ]
+  },
+  "神奈川県": {
+    "region": "関東",
+    "avg_annual_income": 530,
+    "income_distribution": {
+      "under_200": 0.14,
+      "200_400": 0.34,
+      "400_600": 0.26,
+      "600_800": 0.11,
+      "over_800": 0.04
+    },
+    "employment_type": {
+      "regular": 0.57,
+      "part_time": 0.25,
+      "self_employed": 0.12,
+      "unemployed": 0.07
+    },
+    "age_distribution": {
+      "20s": 0.12,
+      "30s": 0.14,
+      "40s": 0.17,
+      "50s": 0.16,
+      "60s": 0.19,
+      "70plus": 0.19
+    },
+    "household_type": {
+      "single": 0.33,
+      "couple_no_kids": 0.2,
+      "couple_with_kids": 0.35,
+      "single_parent": 0.08,
+      "multi_gen": 0.06
+    },
+    "homeownership_rate": 0.6,
+    "ldp_vote_share": 0.4,
+    "opposition_vote_share": 0.45,
+    "avg_commute_minutes": 47,
+    "avg_sleep_hours": 7.3,
+    "internet_usage_rate": 0.8,
+    "avg_monthly_food": 82000,
+    "avg_monthly_housing": 85000,
+    "avg_monthly_entertainment": 32000,
+    "major_industries": [
+      "製造業",
+      "IT",
+      "サービス業",
+      "研究機関"
+    ]
+  },
+  "新潟県": {
+    "region": "中部",
+    "avg_annual_income": 370,
+    "income_distribution": {
+      "under_200": 0.19,
+      "200_400": 0.39,
+      "400_600": 0.22,
+      "600_800": 0.07,
+      "over_800": 0.03
+    },
+    "employment_type": {
+      "regular": 0.55,
+      "part_time": 0.25,
+      "self_employed": 0.12,
+      "unemployed": 0.08
+    },
+    "age_distribution": {
+      "20s": 0.11,
+      "30s": 0.13,
+      "40s": 0.17,
+      "50s": 0.16,
+      "60s": 0.2,
+      "70plus": 0.26
+    },
+    "household_type": {
+      "single": 0.26,
+      "couple_no_kids": 0.21,
+      "couple_with_kids": 0.35,
+      "single_parent": 0.08,
+      "multi_gen": 0.07
+    },
+    "homeownership_rate": 0.74,
+    "ldp_vote_share": 0.51,
+    "opposition_vote_share": 0.34,
+    "avg_commute_minutes": 25,
+    "avg_sleep_hours": 7.4,
+    "internet_usage_rate": 0.77,
+    "avg_monthly_food": 65000,
+    "avg_monthly_housing": 48000,
+    "avg_monthly_entertainment": 20000,
+    "major_industries": [
+      "農業",
+      "製造業",
+      "観光",
+      "食品加工"
+    ]
+  },
+  "富山県": {
+    "region": "中部",
+    "avg_annual_income": 420,
+    "income_distribution": {
+      "under_200": 0.17,
+      "200_400": 0.37,
+      "400_600": 0.23,
+      "600_800": 0.08,
+      "over_800": 0.03
+    },
+    "employment_type": {
+      "regular": 0.56,
+      "part_time": 0.25,
+      "self_employed": 0.12,
+      "unemployed": 0.07
+    },
+    "age_distribution": {
+      "20s": 0.11,
+      "30s": 0.14,
+      "40s": 0.17,
+      "50s": 0.16,
+      "60s": 0.2,
+      "70plus": 0.25
+    },
+    "household_type": {
+      "single": 0.22,
+      "couple_no_kids": 0.21,
+      "couple_with_kids": 0.36,
+      "single_parent": 0.08,
+      "multi_gen": 0.08
+    },
+    "homeownership_rate": 0.8,
+    "ldp_vote_share": 0.58,
+    "opposition_vote_share": 0.27,
+    "avg_commute_minutes": 23,
+    "avg_sleep_hours": 7.4,
+    "internet_usage_rate": 0.78,
+    "avg_monthly_food": 68000,
+    "avg_monthly_housing": 45000,
+    "avg_monthly_entertainment": 22000,
+    "major_industries": [
+      "製造業",
+      "薬品",
+      "農業",
+      "観光"
+    ]
+  },
+  "石川県": {
+    "region": "中部",
+    "avg_annual_income": 410,
+    "income_distribution": {
+      "under_200": 0.18,
+      "200_400": 0.38,
+      "400_600": 0.23,
+      "600_800": 0.08,
+      "over_800": 0.03
+    },
+    "employment_type": {
+      "regular": 0.56,
+      "part_time": 0.25,
+      "self_employed": 0.12,
+      "unemployed": 0.07
+    },
+    "age_distribution": {
+      "20s": 0.11,
+      "30s": 0.14,
+      "40s": 0.17,
+      "50s": 0.16,
+      "60s": 0.19,
+      "70plus": 0.23
+    },
+    "household_type": {
+      "single": 0.26,
+      "couple_no_kids": 0.21,
+      "couple_with_kids": 0.35,
+      "single_parent": 0.08,
+      "multi_gen": 0.07
+    },
+    "homeownership_rate": 0.74,
+    "ldp_vote_share": 0.51,
+    "opposition_vote_share": 0.34,
+    "avg_commute_minutes": 24,
+    "avg_sleep_hours": 7.4,
+    "internet_usage_rate": 0.78,
+    "avg_monthly_food": 70000,
+    "avg_monthly_housing": 50000,
+    "avg_monthly_entertainment": 23000,
+    "major_industries": [
+      "伝統工芸",
+      "製造業",
+      "観光",
+      "農業"
+    ]
+  },
+  "福井県": {
+    "region": "中部",
+    "avg_annual_income": 400,
+    "income_distribution": {
+      "under_200": 0.18,
+      "200_400": 0.38,
+      "400_600": 0.23,
+      "600_800": 0.08,
+      "over_800": 0.03
+    },
+    "employment_type": {
+      "regular": 0.56,
+      "part_time": 0.25,
+      "self_employed": 0.12,
+      "unemployed": 0.07
+    },
+    "age_distribution": {
+      "20s": 0.11,
+      "30s": 0.14,
+      "40s": 0.17,
+      "50s": 0.16,
+      "60s": 0.19,
+      "70plus": 0.24
+    },
+    "household_type": {
+      "single": 0.21,
+      "couple_no_kids": 0.21,
+      "couple_with_kids": 0.36,
+      "single_parent": 0.08,
+      "multi_gen": 0.08
+    },
+    "homeownership_rate": 0.81,
+    "ldp_vote_share": 0.6,
+    "opposition_vote_share": 0.25,
+    "avg_commute_minutes": 22,
+    "avg_sleep_hours": 7.4,
+    "internet_usage_rate": 0.77,
+    "avg_monthly_food": 66000,
+    "avg_monthly_housing": 43000,
+    "avg_monthly_entertainment": 21000,
+    "major_industries": [
+      "製造業",
+      "繊維",
+      "農業",
+      "眼鏡産業"
+    ]
+  },
+  "山梨県": {
+    "region": "中部",
+    "avg_annual_income": 390,
+    "income_distribution": {
+      "under_200": 0.18,
+      "200_400": 0.38,
+      "400_600": 0.23,
+      "600_800": 0.08,
+      "over_800": 0.03
+    },
+    "employment_type": {
+      "regular": 0.55,
+      "part_time": 0.25,
+      "self_employed": 0.12,
+      "unemployed": 0.07
+    },
+    "age_distribution": {
+      "20s": 0.11,
+      "30s": 0.14,
+      "40s": 0.17,
+      "50s": 0.16,
+      "60s": 0.2,
+      "70plus": 0.25
+    },
+    "household_type": {
+      "single": 0.26,
+      "couple_no_kids": 0.21,
+      "couple_with_kids": 0.35,
+      "single_parent": 0.08,
+      "multi_gen": 0.07
+    },
+    "homeownership_rate": 0.7,
+    "ldp_vote_share": 0.53,
+    "opposition_vote_share": 0.32,
+    "avg_commute_minutes": 28,
+    "avg_sleep_hours": 7.4,
+    "internet_usage_rate": 0.77,
+    "avg_monthly_food": 65000,
+    "avg_monthly_housing": 50000,
+    "avg_monthly_entertainment": 21000,
+    "major_industries": [
+      "農業",
+      "観光",
+      "製造業",
+      "電子部品"
+    ]
+  },
+  "長野県": {
+    "region": "中部",
+    "avg_annual_income": 400,
+    "income_distribution": {
+      "under_200": 0.18,
+      "200_400": 0.38,
+      "400_600": 0.23,
+      "600_800": 0.08,
+      "over_800": 0.03
+    },
+    "employment_type": {
+      "regular": 0.56,
+      "part_time": 0.25,
+      "self_employed": 0.12,
+      "unemployed": 0.07
+    },
+    "age_distribution": {
+      "20s": 0.11,
+      "30s": 0.14,
+      "40s": 0.17,
+      "50s": 0.16,
+      "60s": 0.2,
+      "70plus": 0.25
+    },
+    "household_type": {
+      "single": 0.26,
+      "couple_no_kids": 0.21,
+      "couple_with_kids": 0.35,
+      "single_parent": 0.08,
+      "multi_gen": 0.07
+    },
+    "homeownership_rate": 0.72,
+    "ldp_vote_share": 0.48,
+    "opposition_vote_share": 0.37,
+    "avg_commute_minutes": 27,
+    "avg_sleep_hours": 7.4,
+    "internet_usage_rate": 0.77,
+    "avg_monthly_food": 67000,
+    "avg_monthly_housing": 49000,
+    "avg_monthly_entertainment": 22000,
+    "major_industries": [
+      "製造業",
+      "農業",
+      "観光",
+      "精密機械"
+    ]
+  },
+  "岐阜県": {
+    "region": "中部",
+    "avg_annual_income": 420,
+    "income_distribution": {
+      "under_200": 0.17,
+      "200_400": 0.37,
+      "400_600": 0.23,
+      "600_800": 0.08,
+      "over_800": 0.03
+    },
+    "employment_type": {
+      "regular": 0.56,
+      "part_time": 0.25,
+      "self_employed": 0.12,
+      "unemployed": 0.07
+    },
+    "age_distribution": {
+      "20s": 0.11,
+      "30s": 0.14,
+      "40s": 0.17,
+      "50s": 0.16,
+      "60s": 0.19,
+      "70plus": 0.24
+    },
+    "household_type": {
+      "single": 0.24,
+      "couple_no_kids": 0.21,
+      "couple_with_kids": 0.36,
+      "single_parent": 0.08,
+      "multi_gen": 0.07
+    },
+    "homeownership_rate": 0.74,
+    "ldp_vote_share": 0.55,
+    "opposition_vote_share": 0.3,
+    "avg_commute_minutes": 32,
+    "avg_sleep_hours": 7.3,
+    "internet_usage_rate": 0.78,
+    "avg_monthly_food": 69000,
+    "avg_monthly_housing": 53000,
+    "avg_monthly_entertainment": 22000,
+    "major_industries": [
+      "製造業",
+      "農業",
+      "観光",
+      "窯業"
+    ]
+  },
+  "静岡県": {
+    "region": "中部",
+    "avg_annual_income": 450,
+    "income_distribution": {
+      "under_200": 0.17,
+      "200_400": 0.36,
+      "400_600": 0.24,
+      "600_800": 0.09,
+      "over_800": 0.04
+    },
+    "employment_type": {
+      "regular": 0.56,
+      "part_time": 0.25,
+      "self_employed": 0.12,
+      "unemployed": 0.07
+    },
+    "age_distribution": {
+      "20s": 0.11,
+      "30s": 0.14,
+      "40s": 0.17,
+      "50s": 0.16,
+      "60s": 0.19,
+      "70plus": 0.23
+    },
+    "household_type": {
+      "single": 0.25,
+      "couple_no_kids": 0.21,
+      "couple_with_kids": 0.35,
+      "single_parent": 0.08,
+      "multi_gen": 0.07
+    },
+    "homeownership_rate": 0.72,
+    "ldp_vote_share": 0.51,
+    "opposition_vote_share": 0.34,
+    "avg_commute_minutes": 32,
+    "avg_sleep_hours": 7.3,
+    "internet_usage_rate": 0.78,
+    "avg_monthly_food": 71000,
+    "avg_monthly_housing": 56000,
+    "avg_monthly_entertainment": 24000,
+    "major_industries": [
+      "製造業",
+      "農業",
+      "観光",
+      "自動車関連"
+    ]
+  },
+  "愛知県": {
+    "region": "中部",
+    "avg_annual_income": 510,
+    "income_distribution": {
+      "under_200": 0.15,
+      "200_400": 0.35,
+      "400_600": 0.25,
+      "600_800": 0.1,
+      "over_800": 0.04
+    },
+    "employment_type": {
+      "regular": 0.57,
+      "part_time": 0.25,
+      "self_employed": 0.12,
+      "unemployed": 0.07
+    },
+    "age_distribution": {
+      "20s": 0.12,
+      "30s": 0.14,
+      "40s": 0.17,
+      "50s": 0.16,
+      "60s": 0.19,
+      "70plus": 0.19
+    },
+    "household_type": {
+      "single": 0.28,
+      "couple_no_kids": 0.21,
+      "couple_with_kids": 0.35,
+      "single_parent": 0.08,
+      "multi_gen": 0.07
+    },
+    "homeownership_rate": 0.68,
+    "ldp_vote_share": 0.47,
+    "opposition_vote_share": 0.38,
+    "avg_commute_minutes": 35,
+    "avg_sleep_hours": 7.3,
+    "internet_usage_rate": 0.8,
+    "avg_monthly_food": 76000,
+    "avg_monthly_housing": 70000,
+    "avg_monthly_entertainment": 29000,
+    "major_industries": [
+      "自動車産業",
+      "製造業",
+      "IT",
+      "サービス業"
+    ]
+  },
+  "三重県": {
+    "region": "近畿",
+    "avg_annual_income": 420,
+    "income_distribution": {
+      "under_200": 0.17,
+      "200_400": 0.37,
+      "400_600": 0.23,
+      "600_800": 0.08,
+      "over_800": 0.03
+    },
+    "employment_type": {
+      "regular": 0.56,
+      "part_time": 0.25,
+      "self_employed": 0.12,
+      "unemployed": 0.07
+    },
+    "age_distribution": {
+      "20s": 0.11,
+      "30s": 0.14,
+      "40s": 0.17,
+      "50s": 0.16,
+      "60s": 0.19,
+      "70plus": 0.24
+    },
+    "household_type": {
+      "single": 0.25,
+      "couple_no_kids": 0.21,
+      "couple_with_kids": 0.35,
+      "single_parent": 0.08,
+      "multi_gen": 0.07
+    },
+    "homeownership_rate": 0.72,
+    "ldp_vote_share": 0.53,
+    "opposition_vote_share": 0.32,
+    "avg_commute_minutes": 30,
+    "avg_sleep_hours": 7.3,
+    "internet_usage_rate": 0.78,
+    "avg_monthly_food": 69000,
+    "avg_monthly_housing": 54000,
+    "avg_monthly_entertainment": 22000,
+    "major_industries": [
+      "製造業",
+      "観光",
+      "農業",
+      "石油化学"
+    ]
+  },
+  "滋賀県": {
+    "region": "近畿",
+    "avg_annual_income": 460,
+    "income_distribution": {
+      "under_200": 0.16,
+      "200_400": 0.36,
+      "400_600": 0.24,
+      "600_800": 0.09,
+      "over_800": 0.04
+    },
+    "employment_type": {
+      "regular": 0.56,
+      "part_time": 0.25,
+      "self_employed": 0.12,
+      "unemployed": 0.07
+    },
+    "age_distribution": {
+      "20s": 0.12,
+      "30s": 0.14,
+      "40s": 0.17,
+      "50s": 0.16,
+      "60s": 0.19,
+      "70plus": 0.19
+    },
+    "household_type": {
+      "single": 0.24,
+      "couple_no_kids": 0.21,
+      "couple_with_kids": 0.36,
+      "single_parent": 0.08,
+      "multi_gen": 0.07
+    },
+    "homeownership_rate": 0.73,
+    "ldp_vote_share": 0.46,
+    "opposition_vote_share": 0.39,
+    "avg_commute_minutes": 38,
+    "avg_sleep_hours": 7.3,
+    "internet_usage_rate": 0.79,
+    "avg_monthly_food": 72000,
+    "avg_monthly_housing": 60000,
+    "avg_monthly_entertainment": 24000,
+    "major_industries": [
+      "製造業",
+      "物流",
+      "農業",
+      "IT"
+    ]
+  },
+  "京都府": {
+    "region": "近畿",
+    "avg_annual_income": 460,
+    "income_distribution": {
+      "under_200": 0.16,
+      "200_400": 0.36,
+      "400_600": 0.24,
+      "600_800": 0.09,
+      "over_800": 0.04
+    },
+    "employment_type": {
+      "regular": 0.56,
+      "part_time": 0.25,
+      "self_employed": 0.12,
+      "unemployed": 0.07
+    },
+    "age_distribution": {
+      "20s": 0.11,
+      "30s": 0.14,
+      "40s": 0.17,
+      "50s": 0.16,
+      "60s": 0.19,
+      "70plus": 0.24
+    },
+    "household_type": {
+      "single": 0.33,
+      "couple_no_kids": 0.2,
+      "couple_with_kids": 0.35,
+      "single_parent": 0.08,
+      "multi_gen": 0.06
+    },
+    "homeownership_rate": 0.64,
+    "ldp_vote_share": 0.38,
+    "opposition_vote_share": 0.47,
+    "avg_commute_minutes": 32,
+    "avg_sleep_hours": 7.3,
+    "internet_usage_rate": 0.79,
+    "avg_monthly_food": 80000,
+    "avg_monthly_housing": 70000,
+    "avg_monthly_entertainment": 30000,
+    "major_industries": [
+      "観光",
+      "伝統産業",
+      "IT",
+      "教育"
+    ]
+  },
+  "大阪府": {
+    "region": "近畿",
+    "avg_annual_income": 480,
+    "income_distribution": {
+      "under_200": 0.16,
+      "200_400": 0.36,
+      "400_600": 0.25,
+      "600_800": 0.1,
+      "over_800": 0.04
+    },
+    "employment_type": {
+      "regular": 0.56,
+      "part_time": 0.25,
+      "self_employed": 0.12,
+      "unemployed": 0.07
+    },
+    "age_distribution": {
+      "20s": 0.11,
+      "30s": 0.14,
+      "40s": 0.17,
+      "50s": 0.16,
+      "60s": 0.19,
+      "70plus": 0.22
+    },
+    "household_type": {
+      "single": 0.37,
+      "couple_no_kids": 0.2,
+      "couple_with_kids": 0.34,
+      "single_parent": 0.08,
+      "multi_gen": 0.06
+    },
+    "homeownership_rate": 0.55,
+    "ldp_vote_share": 0.36,
+    "opposition_vote_share": 0.49,
+    "avg_commute_minutes": 38,
+    "avg_sleep_hours": 7.3,
+    "internet_usage_rate": 0.79,
+    "avg_monthly_food": 82000,
+    "avg_monthly_housing": 75000,
+    "avg_monthly_entertainment": 32000,
+    "major_industries": [
+      "商業",
+      "サービス業",
+      "製造業",
+      "医療"
+    ]
+  },
+  "兵庫県": {
+    "region": "近畿",
+    "avg_annual_income": 470,
+    "income_distribution": {
+      "under_200": 0.16,
+      "200_400": 0.36,
+      "400_600": 0.24,
+      "600_800": 0.09,
+      "over_800": 0.04
+    },
+    "employment_type": {
+      "regular": 0.56,
+      "part_time": 0.25,
+      "self_employed": 0.12,
+      "unemployed": 0.07
+    },
+    "age_distribution": {
+      "20s": 0.11,
+      "30s": 0.14,
+      "40s": 0.17,
+      "50s": 0.16,
+      "60s": 0.19,
+      "70plus": 0.22
+    },
+    "household_type": {
+      "single": 0.3,
+      "couple_no_kids": 0.21,
+      "couple_with_kids": 0.35,
+      "single_parent": 0.08,
+      "multi_gen": 0.07
+    },
+    "homeownership_rate": 0.65,
+    "ldp_vote_share": 0.42,
+    "opposition_vote_share": 0.43,
+    "avg_commute_minutes": 40,
+    "avg_sleep_hours": 7.3,
+    "internet_usage_rate": 0.79,
+    "avg_monthly_food": 78000,
+    "avg_monthly_housing": 70000,
+    "avg_monthly_entertainment": 30000,
+    "major_industries": [
+      "製造業",
+      "サービス業",
+      "農業",
+      "観光"
+    ]
+  },
+  "奈良県": {
+    "region": "近畿",
+    "avg_annual_income": 440,
+    "income_distribution": {
+      "under_200": 0.17,
+      "200_400": 0.37,
+      "400_600": 0.24,
+      "600_800": 0.09,
+      "over_800": 0.04
+    },
+    "employment_type": {
+      "regular": 0.56,
+      "part_time": 0.25,
+      "self_employed": 0.12,
+      "unemployed": 0.07
+    },
+    "age_distribution": {
+      "20s": 0.11,
+      "30s": 0.14,
+      "40s": 0.17,
+      "50s": 0.16,
+      "60s": 0.2,
+      "70plus": 0.25
+    },
+    "household_type": {
+      "single": 0.27,
+      "couple_no_kids": 0.21,
+      "couple_with_kids": 0.35,
+      "single_parent": 0.08,
+      "multi_gen": 0.07
+    },
+    "homeownership_rate": 0.72,
+    "ldp_vote_share": 0.48,
+    "opposition_vote_share": 0.37,
+    "avg_commute_minutes": 44,
+    "avg_sleep_hours": 7.3,
+    "internet_usage_rate": 0.78,
+    "avg_monthly_food": 72000,
+    "avg_monthly_housing": 60000,
+    "avg_monthly_entertainment": 25000,
+    "major_industries": [
+      "観光",
+      "サービス業",
+      "農業",
+      "製造業"
+    ]
+  },
+  "和歌山県": {
+    "region": "近畿",
+    "avg_annual_income": 360,
+    "income_distribution": {
+      "under_200": 0.19,
+      "200_400": 0.39,
+      "400_600": 0.22,
+      "600_800": 0.07,
+      "over_800": 0.03
+    },
+    "employment_type": {
+      "regular": 0.55,
+      "part_time": 0.25,
+      "self_employed": 0.12,
+      "unemployed": 0.08
+    },
+    "age_distribution": {
+      "20s": 0.11,
+      "30s": 0.13,
+      "40s": 0.17,
+      "50s": 0.16,
+      "60s": 0.2,
+      "70plus": 0.28
+    },
+    "household_type": {
+      "single": 0.27,
+      "couple_no_kids": 0.21,
+      "couple_with_kids": 0.35,
+      "single_parent": 0.08,
+      "multi_gen": 0.07
+    },
+    "homeownership_rate": 0.72,
+    "ldp_vote_share": 0.56,
+    "opposition_vote_share": 0.29,
+    "avg_commute_minutes": 25,
+    "avg_sleep_hours": 7.4,
+    "internet_usage_rate": 0.77,
+    "avg_monthly_food": 65000,
+    "avg_monthly_housing": 45000,
+    "avg_monthly_entertainment": 20000,
+    "major_industries": [
+      "農業",
+      "観光",
+      "製造業",
+      "水産業"
+    ]
+  },
+  "鳥取県": {
+    "region": "中国",
+    "avg_annual_income": 320,
+    "income_distribution": {
+      "under_200": 0.2,
+      "200_400": 0.4,
+      "400_600": 0.21,
+      "600_800": 0.06,
+      "over_800": 0.03
+    },
+    "employment_type": {
+      "regular": 0.55,
+      "part_time": 0.25,
+      "self_employed": 0.12,
+      "unemployed": 0.08
+    },
+    "age_distribution": {
+      "20s": 0.11,
+      "30s": 0.13,
+      "40s": 0.17,
+      "50s": 0.16,
+      "60s": 0.2,
+      "70plus": 0.26
+    },
+    "household_type": {
+      "single": 0.26,
+      "couple_no_kids": 0.21,
+      "couple_with_kids": 0.35,
+      "single_parent": 0.08,
+      "multi_gen": 0.07
+    },
+    "homeownership_rate": 0.7,
+    "ldp_vote_share": 0.57,
+    "opposition_vote_share": 0.28,
+    "avg_commute_minutes": 22,
+    "avg_sleep_hours": 7.4,
+    "internet_usage_rate": 0.76,
+    "avg_monthly_food": 62000,
+    "avg_monthly_housing": 42000,
+    "avg_monthly_entertainment": 19000,
+    "major_industries": [
+      "農業",
+      "観光",
+      "公務",
+      "製造業"
+    ]
+  },
+  "島根県": {
+    "region": "中国",
+    "avg_annual_income": 320,
+    "income_distribution": {
+      "under_200": 0.2,
+      "200_400": 0.4,
+      "400_600": 0.21,
+      "600_800": 0.06,
+      "over_800": 0.03
+    },
+    "employment_type": {
+      "regular": 0.55,
+      "part_time": 0.25,
+      "self_employed": 0.12,
+      "unemployed": 0.08
+    },
+    "age_distribution": {
+      "20s": 0.11,
+      "30s": 0.13,
+      "40s": 0.17,
+      "50s": 0.16,
+      "60s": 0.2,
+      "70plus": 0.28
+    },
+    "household_type": {
+      "single": 0.25,
+      "couple_no_kids": 0.21,
+      "couple_with_kids": 0.35,
+      "single_parent": 0.08,
+      "multi_gen": 0.07
+    },
+    "homeownership_rate": 0.72,
+    "ldp_vote_share": 0.6,
+    "opposition_vote_share": 0.25,
+    "avg_commute_minutes": 22,
+    "avg_sleep_hours": 7.4,
+    "internet_usage_rate": 0.76,
+    "avg_monthly_food": 61000,
+    "avg_monthly_housing": 40000,
+    "avg_monthly_entertainment": 18000,
+    "major_industries": [
+      "農業",
+      "観光",
+      "公務",
+      "製造業"
+    ]
+  },
+  "岡山県": {
+    "region": "中国",
+    "avg_annual_income": 400,
+    "income_distribution": {
+      "under_200": 0.18,
+      "200_400": 0.38,
+      "400_600": 0.23,
+      "600_800": 0.08,
+      "over_800": 0.03
+    },
+    "employment_type": {
+      "regular": 0.56,
+      "part_time": 0.25,
+      "self_employed": 0.12,
+      "unemployed": 0.07
+    },
+    "age_distribution": {
+      "20s": 0.11,
+      "30s": 0.14,
+      "40s": 0.17,
+      "50s": 0.16,
+      "60s": 0.19,
+      "70plus": 0.24
+    },
+    "household_type": {
+      "single": 0.27,
+      "couple_no_kids": 0.21,
+      "couple_with_kids": 0.35,
+      "single_parent": 0.08,
+      "multi_gen": 0.07
+    },
+    "homeownership_rate": 0.67,
+    "ldp_vote_share": 0.5,
+    "opposition_vote_share": 0.35,
+    "avg_commute_minutes": 28,
+    "avg_sleep_hours": 7.4,
+    "internet_usage_rate": 0.77,
+    "avg_monthly_food": 68000,
+    "avg_monthly_housing": 55000,
+    "avg_monthly_entertainment": 23000,
+    "major_industries": [
+      "製造業",
+      "農業",
+      "サービス業",
+      "医療"
+    ]
+  },
+  "広島県": {
+    "region": "中国",
+    "avg_annual_income": 430,
+    "income_distribution": {
+      "under_200": 0.17,
+      "200_400": 0.37,
+      "400_600": 0.24,
+      "600_800": 0.09,
+      "over_800": 0.03
+    },
+    "employment_type": {
+      "regular": 0.56,
+      "part_time": 0.25,
+      "self_employed": 0.12,
+      "unemployed": 0.07
+    },
+    "age_distribution": {
+      "20s": 0.11,
+      "30s": 0.14,
+      "40s": 0.17,
+      "50s": 0.16,
+      "60s": 0.19,
+      "70plus": 0.23
+    },
+    "household_type": {
+      "single": 0.29,
+      "couple_no_kids": 0.21,
+      "couple_with_kids": 0.35,
+      "single_parent": 0.08,
+      "multi_gen": 0.07
+    },
+    "homeownership_rate": 0.65,
+    "ldp_vote_share": 0.47,
+    "opposition_vote_share": 0.38,
+    "avg_commute_minutes": 31,
+    "avg_sleep_hours": 7.3,
+    "internet_usage_rate": 0.78,
+    "avg_monthly_food": 71000,
+    "avg_monthly_housing": 58000,
+    "avg_monthly_entertainment": 25000,
+    "major_industries": [
+      "製造業",
+      "自動車関連",
+      "サービス業",
+      "観光"
+    ]
+  },
+  "山口県": {
+    "region": "中国",
+    "avg_annual_income": 370,
+    "income_distribution": {
+      "under_200": 0.19,
+      "200_400": 0.39,
+      "400_600": 0.22,
+      "600_800": 0.07,
+      "over_800": 0.03
+    },
+    "employment_type": {
+      "regular": 0.55,
+      "part_time": 0.25,
+      "self_employed": 0.12,
+      "unemployed": 0.08
+    },
+    "age_distribution": {
+      "20s": 0.11,
+      "30s": 0.13,
+      "40s": 0.17,
+      "50s": 0.16,
+      "60s": 0.2,
+      "70plus": 0.28
+    },
+    "household_type": {
+      "single": 0.27,
+      "couple_no_kids": 0.21,
+      "couple_with_kids": 0.35,
+      "single_parent": 0.08,
+      "multi_gen": 0.07
+    },
+    "homeownership_rate": 0.68,
+    "ldp_vote_share": 0.55,
+    "opposition_vote_share": 0.3,
+    "avg_commute_minutes": 26,
+    "avg_sleep_hours": 7.4,
+    "internet_usage_rate": 0.77,
+    "avg_monthly_food": 65000,
+    "avg_monthly_housing": 48000,
+    "avg_monthly_entertainment": 21000,
+    "major_industries": [
+      "化学工業",
+      "製造業",
+      "農業",
+      "観光"
+    ]
+  },
+  "徳島県": {
+    "region": "四国",
+    "avg_annual_income": 340,
+    "income_distribution": {
+      "under_200": 0.2,
+      "200_400": 0.4,
+      "400_600": 0.22,
+      "600_800": 0.07,
+      "over_800": 0.03
+    },
+    "employment_type": {
+      "regular": 0.55,
+      "part_time": 0.25,
+      "self_employed": 0.12,
+      "unemployed": 0.08
+    },
+    "age_distribution": {
+      "20s": 0.11,
+      "30s": 0.13,
+      "40s": 0.17,
+      "50s": 0.16,
+      "60s": 0.2,
+      "70plus": 0.26
+    },
+    "household_type": {
+      "single": 0.26,
+      "couple_no_kids": 0.21,
+      "couple_with_kids": 0.35,
+      "single_parent": 0.08,
+      "multi_gen": 0.07
+    },
+    "homeownership_rate": 0.7,
+    "ldp_vote_share": 0.55,
+    "opposition_vote_share": 0.3,
+    "avg_commute_minutes": 24,
+    "avg_sleep_hours": 7.4,
+    "internet_usage_rate": 0.76,
+    "avg_monthly_food": 63000,
+    "avg_monthly_housing": 45000,
+    "avg_monthly_entertainment": 20000,
+    "major_industries": [
+      "農業",
+      "製造業",
+      "IT",
+      "観光"
+    ]
+  },
+  "香川県": {
+    "region": "四国",
+    "avg_annual_income": 380,
+    "income_distribution": {
+      "under_200": 0.19,
+      "200_400": 0.39,
+      "400_600": 0.23,
+      "600_800": 0.08,
+      "over_800": 0.03
+    },
+    "employment_type": {
+      "regular": 0.55,
+      "part_time": 0.25,
+      "self_employed": 0.12,
+      "unemployed": 0.07
+    },
+    "age_distribution": {
+      "20s": 0.11,
+      "30s": 0.14,
+      "40s": 0.17,
+      "50s": 0.16,
+      "60s": 0.2,
+      "70plus": 0.25
+    },
+    "household_type": {
+      "single": 0.26,
+      "couple_no_kids": 0.21,
+      "couple_with_kids": 0.35,
+      "single_parent": 0.08,
+      "multi_gen": 0.07
+    },
+    "homeownership_rate": 0.7,
+    "ldp_vote_share": 0.53,
+    "opposition_vote_share": 0.32,
+    "avg_commute_minutes": 23,
+    "avg_sleep_hours": 7.4,
+    "internet_usage_rate": 0.77,
+    "avg_monthly_food": 66000,
+    "avg_monthly_housing": 48000,
+    "avg_monthly_entertainment": 21000,
+    "major_industries": [
+      "農業",
+      "製造業",
+      "観光",
+      "サービス業"
+    ]
+  },
+  "愛媛県": {
+    "region": "四国",
+    "avg_annual_income": 350,
+    "income_distribution": {
+      "under_200": 0.2,
+      "200_400": 0.4,
+      "400_600": 0.22,
+      "600_800": 0.07,
+      "over_800": 0.03
+    },
+    "employment_type": {
+      "regular": 0.55,
+      "part_time": 0.25,
+      "self_employed": 0.12,
+      "unemployed": 0.08
+    },
+    "age_distribution": {
+      "20s": 0.11,
+      "30s": 0.13,
+      "40s": 0.17,
+      "50s": 0.16,
+      "60s": 0.2,
+      "70plus": 0.26
+    },
+    "household_type": {
+      "single": 0.27,
+      "couple_no_kids": 0.21,
+      "couple_with_kids": 0.35,
+      "single_parent": 0.08,
+      "multi_gen": 0.07
+    },
+    "homeownership_rate": 0.68,
+    "ldp_vote_share": 0.52,
+    "opposition_vote_share": 0.33,
+    "avg_commute_minutes": 25,
+    "avg_sleep_hours": 7.4,
+    "internet_usage_rate": 0.76,
+    "avg_monthly_food": 64000,
+    "avg_monthly_housing": 46000,
+    "avg_monthly_entertainment": 20000,
+    "major_industries": [
+      "農業",
+      "製造業",
+      "水産業",
+      "観光"
+    ]
+  },
+  "高知県": {
+    "region": "四国",
+    "avg_annual_income": 320,
+    "income_distribution": {
+      "under_200": 0.2,
+      "200_400": 0.4,
+      "400_600": 0.21,
+      "600_800": 0.06,
+      "over_800": 0.03
+    },
+    "employment_type": {
+      "regular": 0.55,
+      "part_time": 0.25,
+      "self_employed": 0.12,
+      "unemployed": 0.08
+    },
+    "age_distribution": {
+      "20s": 0.11,
+      "30s": 0.13,
+      "40s": 0.17,
+      "50s": 0.16,
+      "60s": 0.2,
+      "70plus": 0.29
+    },
+    "household_type": {
+      "single": 0.29,
+      "couple_no_kids": 0.21,
+      "couple_with_kids": 0.35,
+      "single_parent": 0.08,
+      "multi_gen": 0.06
+    },
+    "homeownership_rate": 0.64,
+    "ldp_vote_share": 0.47,
+    "opposition_vote_share": 0.38,
+    "avg_commute_minutes": 23,
+    "avg_sleep_hours": 7.4,
+    "internet_usage_rate": 0.76,
+    "avg_monthly_food": 62000,
+    "avg_monthly_housing": 42000,
+    "avg_monthly_entertainment": 19000,
+    "major_industries": [
+      "農業",
+      "観光",
+      "公務",
+      "水産業"
+    ]
+  },
+  "福岡県": {
+    "region": "九州",
+    "avg_annual_income": 430,
+    "income_distribution": {
+      "under_200": 0.17,
+      "200_400": 0.37,
+      "400_600": 0.24,
+      "600_800": 0.09,
+      "over_800": 0.03
+    },
+    "employment_type": {
+      "regular": 0.56,
+      "part_time": 0.25,
+      "self_employed": 0.12,
+      "unemployed": 0.07
+    },
+    "age_distribution": {
+      "20s": 0.11,
+      "30s": 0.14,
+      "40s": 0.17,
+      "50s": 0.16,
+      "60s": 0.19,
+      "70plus": 0.21
+    },
+    "household_type": {
+      "single": 0.35,
+      "couple_no_kids": 0.2,
+      "couple_with_kids": 0.35,
+      "single_parent": 0.08,
+      "multi_gen": 0.06
+    },
+    "homeownership_rate": 0.58,
+    "ldp_vote_share": 0.38,
+    "opposition_vote_share": 0.47,
+    "avg_commute_minutes": 34,
+    "avg_sleep_hours": 7.3,
+    "internet_usage_rate": 0.78,
+    "avg_monthly_food": 75000,
+    "avg_monthly_housing": 65000,
+    "avg_monthly_entertainment": 28000,
+    "major_industries": [
+      "サービス業",
+      "製造業",
+      "IT",
+      "医療"
+    ]
+  },
+  "佐賀県": {
+    "region": "九州",
+    "avg_annual_income": 340,
+    "income_distribution": {
+      "under_200": 0.2,
+      "200_400": 0.4,
+      "400_600": 0.22,
+      "600_800": 0.07,
+      "over_800": 0.03
+    },
+    "employment_type": {
+      "regular": 0.55,
+      "part_time": 0.25,
+      "self_employed": 0.12,
+      "unemployed": 0.08
+    },
+    "age_distribution": {
+      "20s": 0.11,
+      "30s": 0.14,
+      "40s": 0.17,
+      "50s": 0.16,
+      "60s": 0.19,
+      "70plus": 0.24
+    },
+    "household_type": {
+      "single": 0.24,
+      "couple_no_kids": 0.21,
+      "couple_with_kids": 0.36,
+      "single_parent": 0.08,
+      "multi_gen": 0.07
+    },
+    "homeownership_rate": 0.71,
+    "ldp_vote_share": 0.57,
+    "opposition_vote_share": 0.28,
+    "avg_commute_minutes": 24,
+    "avg_sleep_hours": 7.4,
+    "internet_usage_rate": 0.76,
+    "avg_monthly_food": 64000,
+    "avg_monthly_housing": 44000,
+    "avg_monthly_entertainment": 20000,
+    "major_industries": [
+      "農業",
+      "製造業",
+      "観光",
+      "陶磁器"
+    ]
+  },
+  "長崎県": {
+    "region": "九州",
+    "avg_annual_income": 320,
+    "income_distribution": {
+      "under_200": 0.2,
+      "200_400": 0.4,
+      "400_600": 0.21,
+      "600_800": 0.06,
+      "over_800": 0.03
+    },
+    "employment_type": {
+      "regular": 0.55,
+      "part_time": 0.25,
+      "self_employed": 0.12,
+      "unemployed": 0.08
+    },
+    "age_distribution": {
+      "20s": 0.11,
+      "30s": 0.13,
+      "40s": 0.17,
+      "50s": 0.16,
+      "60s": 0.2,
+      "70plus": 0.27
+    },
+    "household_type": {
+      "single": 0.29,
+      "couple_no_kids": 0.21,
+      "couple_with_kids": 0.35,
+      "single_parent": 0.08,
+      "multi_gen": 0.06
+    },
+    "homeownership_rate": 0.64,
+    "ldp_vote_share": 0.5,
+    "opposition_vote_share": 0.35,
+    "avg_commute_minutes": 26,
+    "avg_sleep_hours": 7.4,
+    "internet_usage_rate": 0.76,
+    "avg_monthly_food": 63000,
+    "avg_monthly_housing": 45000,
+    "avg_monthly_entertainment": 20000,
+    "major_industries": [
+      "造船",
+      "観光",
+      "農業",
+      "水産業"
+    ]
+  },
+  "熊本県": {
+    "region": "九州",
+    "avg_annual_income": 340,
+    "income_distribution": {
+      "under_200": 0.2,
+      "200_400": 0.4,
+      "400_600": 0.22,
+      "600_800": 0.07,
+      "over_800": 0.03
+    },
+    "employment_type": {
+      "regular": 0.55,
+      "part_time": 0.25,
+      "self_employed": 0.12,
+      "unemployed": 0.08
+    },
+    "age_distribution": {
+      "20s": 0.11,
+      "30s": 0.14,
+      "40s": 0.17,
+      "50s": 0.16,
+      "60s": 0.19,
+      "70plus": 0.24
+    },
+    "household_type": {
+      "single": 0.28,
+      "couple_no_kids": 0.21,
+      "couple_with_kids": 0.35,
+      "single_parent": 0.08,
+      "multi_gen": 0.07
+    },
+    "homeownership_rate": 0.66,
+    "ldp_vote_share": 0.5,
+    "opposition_vote_share": 0.35,
+    "avg_commute_minutes": 26,
+    "avg_sleep_hours": 7.4,
+    "internet_usage_rate": 0.76,
+    "avg_monthly_food": 66000,
+    "avg_monthly_housing": 48000,
+    "avg_monthly_entertainment": 21000,
+    "major_industries": [
+      "農業",
+      "半導体",
+      "製造業",
+      "観光"
+    ]
+  },
+  "大分県": {
+    "region": "九州",
+    "avg_annual_income": 340,
+    "income_distribution": {
+      "under_200": 0.2,
+      "200_400": 0.4,
+      "400_600": 0.22,
+      "600_800": 0.07,
+      "over_800": 0.03
+    },
+    "employment_type": {
+      "regular": 0.55,
+      "part_time": 0.25,
+      "self_employed": 0.12,
+      "unemployed": 0.08
+    },
+    "age_distribution": {
+      "20s": 0.11,
+      "30s": 0.13,
+      "40s": 0.17,
+      "50s": 0.16,
+      "60s": 0.2,
+      "70plus": 0.26
+    },
+    "household_type": {
+      "single": 0.27,
+      "couple_no_kids": 0.21,
+      "couple_with_kids": 0.35,
+      "single_parent": 0.08,
+      "multi_gen": 0.07
+    },
+    "homeownership_rate": 0.66,
+    "ldp_vote_share": 0.52,
+    "opposition_vote_share": 0.33,
+    "avg_commute_minutes": 25,
+    "avg_sleep_hours": 7.4,
+    "internet_usage_rate": 0.76,
+    "avg_monthly_food": 64000,
+    "avg_monthly_housing": 45000,
+    "avg_monthly_entertainment": 20000,
+    "major_industries": [
+      "観光",
+      "農業",
+      "製造業",
+      "石油化学"
+    ]
+  },
+  "宮崎県": {
+    "region": "九州",
+    "avg_annual_income": 310,
+    "income_distribution": {
+      "under_200": 0.21,
+      "200_400": 0.41,
+      "400_600": 0.21,
+      "600_800": 0.06,
+      "over_800": 0.02
+    },
+    "employment_type": {
+      "regular": 0.55,
+      "part_time": 0.25,
+      "self_employed": 0.12,
+      "unemployed": 0.08
+    },
+    "age_distribution": {
+      "20s": 0.11,
+      "30s": 0.14,
+      "40s": 0.17,
+      "50s": 0.16,
+      "60s": 0.2,
+      "70plus": 0.25
+    },
+    "household_type": {
+      "single": 0.28,
+      "couple_no_kids": 0.21,
+      "couple_with_kids": 0.35,
+      "single_parent": 0.08,
+      "multi_gen": 0.06
+    },
+    "homeownership_rate": 0.64,
+    "ldp_vote_share": 0.54,
+    "opposition_vote_share": 0.31,
+    "avg_commute_minutes": 24,
+    "avg_sleep_hours": 7.4,
+    "internet_usage_rate": 0.76,
+    "avg_monthly_food": 62000,
+    "avg_monthly_housing": 43000,
+    "avg_monthly_entertainment": 19000,
+    "major_industries": [
+      "農業",
+      "観光",
+      "水産業",
+      "製造業"
+    ]
+  },
+  "鹿児島県": {
+    "region": "九州",
+    "avg_annual_income": 310,
+    "income_distribution": {
+      "under_200": 0.21,
+      "200_400": 0.41,
+      "400_600": 0.21,
+      "600_800": 0.06,
+      "over_800": 0.02
+    },
+    "employment_type": {
+      "regular": 0.55,
+      "part_time": 0.25,
+      "self_employed": 0.12,
+      "unemployed": 0.08
+    },
+    "age_distribution": {
+      "20s": 0.11,
+      "30s": 0.14,
+      "40s": 0.17,
+      "50s": 0.16,
+      "60s": 0.2,
+      "70plus": 0.25
+    },
+    "household_type": {
+      "single": 0.28,
+      "couple_no_kids": 0.21,
+      "couple_with_kids": 0.35,
+      "single_parent": 0.08,
+      "multi_gen": 0.06
+    },
+    "homeownership_rate": 0.64,
+    "ldp_vote_share": 0.52,
+    "opposition_vote_share": 0.33,
+    "avg_commute_minutes": 26,
+    "avg_sleep_hours": 7.4,
+    "internet_usage_rate": 0.76,
+    "avg_monthly_food": 63000,
+    "avg_monthly_housing": 44000,
+    "avg_monthly_entertainment": 19000,
+    "major_industries": [
+      "農業",
+      "観光",
+      "水産業",
+      "宇宙産業"
+    ]
+  },
+  "沖縄県": {
+    "region": "沖縄",
+    "avg_annual_income": 280,
+    "income_distribution": {
+      "under_200": 0.22,
+      "200_400": 0.42,
+      "400_600": 0.21,
+      "600_800": 0.06,
+      "over_800": 0.02
+    },
+    "employment_type": {
+      "regular": 0.54,
+      "part_time": 0.25,
+      "self_employed": 0.12,
+      "unemployed": 0.08
+    },
+    "age_distribution": {
+      "20s": 0.12,
+      "30s": 0.14,
+      "40s": 0.17,
+      "50s": 0.16,
+      "60s": 0.19,
+      "70plus": 0.15
+    },
+    "household_type": {
+      "single": 0.35,
+      "couple_no_kids": 0.2,
+      "couple_with_kids": 0.35,
+      "single_parent": 0.08,
+      "multi_gen": 0.05
+    },
+    "homeownership_rate": 0.5,
+    "ldp_vote_share": 0.32,
+    "opposition_vote_share": 0.53,
+    "avg_commute_minutes": 28,
+    "avg_sleep_hours": 7.4,
+    "internet_usage_rate": 0.75,
+    "avg_monthly_food": 68000,
+    "avg_monthly_housing": 50000,
+    "avg_monthly_entertainment": 25000,
+    "major_industries": [
+      "観光",
+      "サービス業",
+      "農業",
+      "基地関連"
+    ]
+  }
+}

@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>案C: Data Studio | ペルソナ AI</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+JP:wght@300;400;500;700&display=swap"
+        rel="stylesheet" />
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0
+        }
+
+        :root {
+            --bg: #0c0e16;
+            --bg2: #11141f;
+            --bg3: #171b2d;
+            --bg4: #1e2338;
+            --emerald: #10b981;
+            --sky: #38bdf8;
+            --amber: #fbbf24;
+            --rose: #fb7185;
+            --accent: #38bdf8;
+            --accent2: #818cf8;
+            --text: #f1f5f9;
+            --text2: #8894b4;
+            --text3: #455172;
+            --border: rgba(255, 255, 255, 0.07);
+        }
+
+        body {
+            font-family: 'Inter', 'Noto Sans JP', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .layout {
+            display: flex;
+            height: 100vh;
+        }
+
+        /* TOP BAR */
+        .topbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 52px;
+            background: rgba(12, 14, 22, 0.92);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            gap: 16px;
+            z-index: 50;
+        }
+
+        .topbar-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .topbar-icon {
+            width: 30px;
+            height: 30px;
+            border-radius: 8px;
+            background: linear-gradient(135deg, var(--sky), var(--accent2));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+        }
+
+        .topbar-name {
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: -0.3px;
+        }
+
+        .topbar-sep {
+            width: 1px;
+            height: 20px;
+            background: var(--border);
+        }
+
+        .topbar-nav {
+            display: flex;
+            gap: 4px;
+        }
+
+        .tb-item {
+            padding: 5px 12px;
+            border-radius: 7px;
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--text2);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .tb-item.active {
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--sky);
+            border: 1px solid rgba(56, 189, 248, 0.2);
+        }
+
+        .tb-item:not(.active):hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .topbar-spacer {
+            flex: 1;
+        }
+
+        .status-pill {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.2);
+            border-radius: 20px;
+            padding: 4px 12px;
+            font-size: 11px;
+            color: var(--emerald);
+            font-weight: 600;
+        }
+
+        .status-dot {
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background: var(--emerald);
+            animation: blink 2s ease-in-out infinite;
+        }
+
+        @keyframes blink {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.3;
+            }
+        }
+
+        /* SIDEBAR */
+        .sidebar {
+            width: 220px;
+            flex-shrink: 0;
+            padding: 72px 14px 20px;
+            display: flex;
+            flex-direction: column;
+            background: var(--bg2);
+            border-right: 1px solid var(--border);
+        }
+
+        .side-section {
+            font-size: 10px;
+            font-weight: 600;
+            color: var(--text3);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            padding: 0 8px;
+            margin: 16px 0 8px;
+        }
+
+        .side-item {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            padding: 8px 10px;
+            border-radius: 8px;
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--text2);
+            cursor: pointer;
+            transition: all 0.15s;
+            margin-bottom: 2px;
+        }
+
+        .side-item.active {
+            background: rgba(56, 189, 248, 0.1);
+            color: var(--sky);
+        }
+
+        .side-item:not(.active):hover {
+            background: rgba(255, 255, 255, 0.04);
+        }
+
+        .sidebar-spacer {
+            flex: 1;
+        }
+
+        .mini-stats {
+            background: var(--bg3);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 12px;
+        }
+
+        .mini-stat {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 4px 0;
+            font-size: 11px;
+        }
+
+        .mini-stat:not(:last-child) {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+        }
+
+        .mini-stat-k {
+            color: var(--text3);
+        }
+
+        .mini-stat-v {
+            font-weight: 700;
+            font-size: 12px;
+        }
+
+        /* MAIN */
+        .main {
+            flex: 1;
+            overflow-y: auto;
+            padding: 72px 36px 32px;
+        }
+
+        /* hero row */
+        .hero-row {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 24px;
+            margin-bottom: 32px;
+        }
+
+        .hero-left {}
+
+        .hero-breadcrumb {
+            font-size: 11px;
+            color: var(--text3);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .hero-breadcrumb span {
+            color: var(--text2);
+        }
+
+        .hero-title {
+            font-size: 30px;
+            font-weight: 800;
+            letter-spacing: -1px;
+            margin-bottom: 8px;
+        }
+
+        .hero-sub {
+            font-size: 13px;
+            color: var(--text2);
+            max-width: 480px;
+            line-height: 1.7;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .btn-primary {
+            padding: 10px 22px;
+            border-radius: 9px;
+            border: none;
+            font-family: inherit;
+            font-size: 13px;
+            font-weight: 700;
+            cursor: pointer;
+            background: linear-gradient(135deg, var(--sky), var(--accent2));
+            color: #fff;
+            box-shadow: 0 4px 20px rgba(56, 189, 248, 0.3);
+            transition: all 0.2s;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 6px 24px rgba(56, 189, 248, 0.4);
+        }
+
+        .btn-outline {
+            padding: 10px 22px;
+            border-radius: 9px;
+            font-family: inherit;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            background: transparent;
+            border: 1px solid var(--border);
+            color: var(--text2);
+            transition: all 0.2s;
+        }
+
+        .btn-outline:hover {
+            border-color: rgba(255, 255, 255, 0.2);
+            color: var(--text);
+        }
+
+        /* kpi row */
+        .kpi-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+            margin-bottom: 28px;
+        }
+
+        .kpi {
+            background: var(--bg2);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 16px 18px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .kpi::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--kpi-color, var(--sky));
+            opacity: 0.6;
+        }
+
+        .kpi-icon {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .kpi-num {
+            font-size: 26px;
+            font-weight: 800;
+            letter-spacing: -1px;
+            color: var(--text);
+        }
+
+        .kpi-label {
+            font-size: 11px;
+            color: var(--text3);
+            margin-top: 3px;
+        }
+
+        .kpi-change {
+            font-size: 10px;
+            margin-top: 4px;
+            color: var(--emerald);
+        }
+
+        /* map grid */
+        .section-box {
+            background: var(--bg2);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 24px;
+        }
+
+        .section-head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .section-head-title {
+            font-size: 14px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .section-head-sub {
+            font-size: 11px;
+            color: var(--text3);
+        }
+
+        .region-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 12px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+        }
+
+        .region-row:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .region-tag {
+            font-size: 10px;
+            color: var(--text3);
+            font-weight: 600;
+            width: 40px;
+            flex-shrink: 0;
+            padding-top: 6px;
+            text-align: right;
+        }
+
+        .chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+
+        .chip {
+            padding: 5px 12px;
+            border-radius: 7px;
+            font-size: 11px;
+            font-weight: 500;
+            cursor: pointer;
+            background: var(--bg3);
+            border: 1px solid var(--border);
+            color: var(--text2);
+            transition: all 0.15s;
+        }
+
+        .chip:hover {
+            background: rgba(56, 189, 248, 0.1);
+            border-color: rgba(56, 189, 248, 0.3);
+            color: var(--sky);
+        }
+
+        .design-label {
+            position: fixed;
+            top: 60px;
+            right: 16px;
+            background: rgba(56, 189, 248, 0.1);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            border-radius: 8px;
+            padding: 5px 12px;
+            font-size: 11px;
+            color: var(--sky);
+            font-weight: 600;
+            z-index: 100;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="design-label">案C: Data Studio</div>
+
+    <!-- Top Bar -->
+    <nav class="topbar">
+        <div class="topbar-logo">
+            <div class="topbar-icon">🧠</div>
+            <span class="topbar-name">Persona AI</span>
+        </div>
+        <div class="topbar-sep"></div>
+        <div class="topbar-nav">
+            <span class="tb-item active">ダッシュボード</span>
+            <span class="tb-item">一括質問</span>
+        </div>
+        <div class="topbar-spacer"></div>
+        <div class="status-pill">
+            <div class="status-dot"></div>API オンライン
+        </div>
+    </nav>
+
+    <div class="layout">
+        <aside class="sidebar">
+            <div class="side-section">ナビゲーション</div>
+            <div class="side-item active">🗾 ダッシュボード</div>
+            <div class="side-item">📡 一括質問</div>
+            <div class="sidebar-spacer"></div>
+            <div class="mini-stats">
+                <div class="mini-stat"><span class="mini-stat-k">ペルソナ数</span><span class="mini-stat-v"
+                        style="color:var(--sky)">470</span></div>
+                <div class="mini-stat"><span class="mini-stat-k">都道府県</span><span class="mini-stat-v"
+                        style="color:var(--accent2)">47</span></div>
+                <div class="mini-stat"><span class="mini-stat-k">API残量</span><span class="mini-stat-v"
+                        style="color:var(--emerald)">1,500</span></div>
+            </div>
+        </aside>
+
+        <main class="main">
+            <!-- Hero Row -->
+            <div class="hero-row">
+                <div class="hero-left">
+                    <div class="hero-breadcrumb">Dashboard <span>›</span> ペルソナ一覧</div>
+                    <h1 class="hero-title">仮想ペルソナシミュレータ</h1>
+                    <p class="hero-sub">47都道府県・470人の仮想市民が、あなたの質問にリアルに回答します。統計データから生成された精度の高いペルソナと対話できます。</p>
+                    <div class="hero-actions">
+                        <button class="btn-primary">📡 全員に質問する</button>
+                        <button class="btn-outline">ペルソナを選ぶ</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- KPIs -->
+            <div class="kpi-row">
+                <div class="kpi" style="--kpi-color:#38bdf8">
+                    <div class="kpi-icon">👥</div>
+                    <div class="kpi-num">470</div>
+                    <div class="kpi-label">総ペルソナ数</div>
+                    <div class="kpi-change">↑ 47 都道府県</div>
+                </div>
+                <div class="kpi" style="--kpi-color:#818cf8">
+                    <div class="kpi-icon">🗾</div>
+                    <div class="kpi-num">47</div>
+                    <div class="kpi-label">対応都道府県</div>
+                    <div class="kpi-change">↑ 全国カバー</div>
+                </div>
+                <div class="kpi" style="--kpi-color:#10b981">
+                    <div class="kpi-icon">⚡</div>
+                    <div class="kpi-num">15/m</div>
+                    <div class="kpi-label">API処理速度</div>
+                    <div class="kpi-change">↓ 31分 / 全員</div>
+                </div>
+                <div class="kpi" style="--kpi-color:#fbbf24">
+                    <div class="kpi-icon">🎯</div>
+                    <div class="kpi-num">10</div>
+                    <div class="kpi-label">県あたりペルソナ</div>
+                    <div class="kpi-change">↑ 均等分布</div>
+                </div>
+            </div>
+
+            <!-- Map -->
+            <div class="section-box">
+                <div class="section-head">
+                    <div class="section-head-title">🗾 都道府県マップ</div>
+                    <div class="section-head-sub">クリックしてペルソナを表示</div>
+                </div>
+                <div class="region-row">
+                    <div class="region-tag">北海道</div>
+                    <div class="chips"><span class="chip">北海道</span></div>
+                </div>
+                <div class="region-row">
+                    <div class="region-tag">東北</div>
+                    <div class="chips"><span class="chip">青森県</span><span class="chip">岩手県</span><span
+                            class="chip">宮城県</span><span class="chip">秋田県</span><span class="chip">山形県</span><span
+                            class="chip">福島県</span></div>
+                </div>
+                <div class="region-row">
+                    <div class="region-tag">関東</div>
+                    <div class="chips"><span class="chip">茨城県</span><span class="chip">栃木県</span><span
+                            class="chip">群馬県</span><span class="chip">埼玉県</span><span class="chip">千葉県</span><span
+                            class="chip">東京都</span><span class="chip">神奈川県</span></div>
+                </div>
+                <div class="region-row">
+                    <div class="region-tag">中部</div>
+                    <div class="chips"><span class="chip">新潟県</span><span class="chip">富山県</span><span
+                            class="chip">石川県</span><span class="chip">福井県</span><span class="chip">山梨県</span><span
+                            class="chip">長野県</span><span class="chip">岐阜県</span><span class="chip">静岡県</span><span
+                            class="chip">愛知県</span></div>
+                </div>
+                <div class="region-row">
+                    <div class="region-tag">近畿</div>
+                    <div class="chips"><span class="chip">三重県</span><span class="chip">滋賀県</span><span
+                            class="chip">京都府</span><span class="chip">大阪府</span><span class="chip">兵庫県</span><span
+                            class="chip">奈良県</span><span class="chip">和歌山県</span></div>
+                </div>
+                <div class="region-row">
+                    <div class="region-tag">中国</div>
+                    <div class="chips"><span class="chip">鳥取県</span><span class="chip">島根県</span><span
+                            class="chip">岡山県</span><span class="chip">広島県</span><span class="chip">山口県</span></div>
+                </div>
+                <div class="region-row">
+                    <div class="region-tag">四国</div>
+                    <div class="chips"><span class="chip">徳島県</span><span class="chip">香川県</span><span
+                            class="chip">愛媛県</span><span class="chip">高知県</span></div>
+                </div>
+                <div class="region-row">
+                    <div class="region-tag">九州</div>
+                    <div class="chips"><span class="chip">福岡県</span><span class="chip">佐賀県</span><span
+                            class="chip">長崎県</span><span class="chip">熊本県</span><span class="chip">大分県</span><span
+                            class="chip">宮崎県</span><span class="chip">鹿児島県</span><span class="chip">沖縄県</span></div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

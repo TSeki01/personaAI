@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>インタビュー | ペルソナ AI</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Inter:wght@300;400;600;700&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <div class="app interview-app">
+        <!-- 左ペイン: プロフィール -->
+        <aside class="profile-pane">
+            <a href="index.html" class="back-link">← ダッシュボード</a>
+            <div id="profile-content" class="profile-loading">読み込み中...</div>
+        </aside>
+
+        <!-- 右ペイン: チャット -->
+        <div class="chat-pane">
+            <div class="chat-header">
+                <div class="chat-avatar" id="chat-avatar">？</div>
+                <div>
+                    <div class="chat-name" id="chat-name">ペルソナ</div>
+                    <div class="chat-sub" id="chat-sub">読み込み中...</div>
+                </div>
+                <div class="online-badge">● オンライン</div>
+            </div>
+
+            <div class="chat-messages" id="chat-messages">
+                <div class="chat-notice">
+                    ここから会話を始めてください。ペルソナはプロフィールに基づいて回答します。
+                </div>
+            </div>
+
+            <div class="chat-input-area">
+                <textarea id="chat-input" class="chat-input" rows="2" placeholder="質問を入力してEnterで送信（Shift+Enterで改行）"
+                    onkeydown="handleChatKey(event)"></textarea>
+                <button class="btn btn-primary chat-send" id="send-btn" onclick="sendMessage()">送信</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="api.js" data-api-url=""></script>
+    <script src="interview.js"></script>
+</body>
+
+</html>

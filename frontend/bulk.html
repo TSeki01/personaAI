@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>一括質問 | ペルソナ AI</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Inter:wght@300;400;600;700&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <div class="app">
+        <aside class="sidebar">
+            <div class="logo">
+                <div class="logo-icon">🧠</div>
+                <div>
+                    <div class="logo-title">ペルソナ AI</div>
+                    <div class="logo-sub">470人のシミュレータ</div>
+                </div>
+            </div>
+            <nav class="nav">
+                <a href="index.html" class="nav-item" id="nav-home">
+                    <span class="nav-icon">🗾</span> ダッシュボード
+                </a>
+                <a href="bulk.html" class="nav-item active" id="nav-bulk">
+                    <span class="nav-icon">📡</span> 一括質問
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="stat-pill"><span>総ペルソナ数</span><strong id="total-count">読込中...</strong></div>
+                <div class="stat-pill"><span>都道府県</span><strong>47</strong></div>
+            </div>
+        </aside>
+
+        <main class="main">
+            <header class="page-header">
+                <div>
+                    <h1>一括質問</h1>
+                    <p class="subtitle">全470人のペルソナに同時に質問できます &nbsp;｜&nbsp; <span id="est-time-label">⏱
+                            所要時間の目安：約31分（全員対象）</span></p>
+                </div>
+            </header>
+
+            <!-- 質問フォーム -->
+            <div class="card question-card">
+                <div class="form-group">
+                    <label class="form-label">質問内容</label>
+                    <textarea id="question-input" class="form-textarea" rows="3"
+                        placeholder="例: 最近、生活で一番困っていることは何ですか？"></textarea>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label">都道府県フィルター（任意）</label>
+                        <select id="pref-filter" class="form-select">
+                            <option value="">全国（470人）</option>
+                        </select>
+                    </div>
+                    <button class="btn btn-primary btn-lg" id="ask-btn" onclick="startBulkQuestion()">
+                        <span id="ask-btn-text">📡 全員に質問する</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 進捗バー -->
+            <div class="card progress-card" id="progress-card" style="display:none">
+                <div class="progress-header">
+                    <span class="progress-label">回答収集中...</span>
+                    <span class="progress-count" id="progress-count">0 / 0</span>
+                </div>
+                <div class="progress-bar-track">
+                    <div class="progress-bar-fill" id="progress-bar"></div>
+                </div>
+                <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <div class="progress-status" id="progress-status">準備中...</div>
+                    <div style="font-size:12px; color:var(--text2); white-space:nowrap;">
+                        経過: <span id="elapsed-time">0:00</span> &nbsp;|&nbsp;
+                        残り: <span id="remaining-time">--:--</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 結果エリア -->
+            <div id="results-area" style="display:none">
+                <div class="results-header">
+                    <h2>回答結果 <span class="badge" id="result-count"></span></h2>
+                    <div class="results-controls">
+                        <input type="text" id="search-input" class="form-input" placeholder="🔍 回答を検索..."
+                            oninput="filterResults()" />
+                        <select id="region-filter-result" class="form-select" onchange="filterResults()">
+                            <option value="">全地域</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="results-grid" id="results-grid"></div>
+            </div>
+        </main>
+    </div>
+
+    <script src="api.js" data-api-url=""></script>
+    <script src="bulk.js"></script>
+</body>
+
+</html>

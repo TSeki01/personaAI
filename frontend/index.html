@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>仮想ペルソナシミュレータ</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Inter:wght@300;400;600;700&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <div class="app">
+    <!-- サイドバー -->
+    <aside class="sidebar">
+      <div class="logo">
+        <div class="logo-icon">🧠</div>
+        <div>
+          <div class="logo-title">ペルソナ AI</div>
+          <div class="logo-sub">470人のシミュレータ</div>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="index.html" class="nav-item active" id="nav-home">
+          <span class="nav-icon">🗾</span> ダッシュボード
+        </a>
+        <a href="bulk.html" class="nav-item" id="nav-bulk">
+          <span class="nav-icon">📡</span> 一括質問
+        </a>
+      </nav>
+      <div class="sidebar-footer">
+        <div class="stat-pill">
+          <span>総ペルソナ数</span>
+          <strong id="total-count">読込中...</strong>
+        </div>
+        <div class="stat-pill">
+          <span>都道府県</span>
+          <strong>47</strong>
+        </div>
+        <div class="usage-card" id="usage-card"
+          style="margin-top:8px;background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:10px;font-size:11px">
+          <div style="display:flex;justify-content:space-between;margin-bottom:6px">
+            <span style="color:var(--text3)">API使用量 (今日)</span>
+            <span id="usage-count" style="color:var(--accent2);font-weight:600">--/1500</span>
+          </div>
+          <div style="height:4px;background:var(--bg4);border-radius:2px;overflow:hidden">
+            <div id="usage-bar"
+              style="height:100%;width:0%;background:linear-gradient(90deg,var(--green),var(--yellow));border-radius:2px;transition:width 0.5s">
+            </div>
+          </div>
+          <div style="display:flex;justify-content:space-between;margin-top:5px;color:var(--text3)">
+            <span>RPM: <span id="usage-rpm">--</span>/15</span>
+            <span>残: <span id="usage-remain" style="color:var(--green);font-weight:600">--</span></span>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- メインコンテンツ -->
+    <main class="main">
+      <header class="page-header">
+        <div>
+          <h1>都道府県マップ</h1>
+          <p class="subtitle">都道府県を選択してペルソナを確認</p>
+        </div>
+        <div class="region-filter" id="region-filter"></div>
+      </header>
+
+      <!-- 日本地図（地域グリッド） -->
+      <div class="japan-map" id="japan-map"></div>
+
+      <!-- ペルソナパネル -->
+      <div class="persona-panel" id="persona-panel" style="display:none">
+        <div class="panel-header">
+          <h2 id="panel-title"></h2>
+          <button class="close-btn" onclick="closePanel()">✕</button>
+        </div>
+        <div class="persona-grid" id="persona-grid"></div>
+      </div>
+    </main>
+  </div>
+
+  <!-- ペルソナ詳細モーダル -->
+  <div class="modal-overlay" id="modal-overlay" onclick="closeModal()">
+    <div class="modal" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <div class="modal-content" id="modal-content"></div>
+      <div class="modal-actions">
+        <button class="btn btn-primary" id="interview-btn">💬 インタビュー開始</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="api.js" data-api-url=""></script>
+  <script src="map.js"></script>
+  <script src="index.js"></script>
+</body>
+
+</html>

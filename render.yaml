@@ -1,0 +1,36 @@
+services:
+  # ── バックエンド: FastAPI Web Service ─────────────────────────────
+  - type: web
+    name: persona-api
+    runtime: python
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false          # Renderダッシュボードで手動設定（シークレット）
+      - key: GEMINI_MODEL
+        value: gemini-2.0-flash
+      - key: BULK_CONCURRENCY
+        value: "3"
+      - key: FRONTEND_ORIGIN
+        value: https://persona-frontend.onrender.com  # デプロイ後に変更
+    healthCheckPath: /api/usage
+    plan: free
+
+  # ── フロントエンド: Static Site ───────────────────────────────────
+  - type: web
+    name: persona-frontend
+    runtime: static
+    rootDir: frontend
+    staticPublishPath: .
+    buildCommand: ""         # ビルド不要（純粋な静的ファイル）
+    plan: free
+    headers:
+      - path: /*
+        name: Cache-Control
+        value: no-cache
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html

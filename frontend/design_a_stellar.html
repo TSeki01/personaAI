@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>案A: Stellar | ペルソナ AI</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Noto+Sans+JP:wght@300;400;500;700&display=swap"
+        rel="stylesheet" />
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0
+        }
+
+        :root {
+            --bg: #03050f;
+            --bg2: #080c1a;
+            --bg3: #0e1428;
+            --accent: #7c6dfa;
+            --accent2: #a78bfa;
+            --neon: #00e5ff;
+            --text: #e8edf8;
+            --text2: #7b8ab0;
+            --text3: #3d4a6b;
+            --glow: rgba(124, 109, 250, 0.4);
+            --neon-glow: rgba(0, 229, 255, 0.3);
+        }
+
+        body {
+            font-family: 'Inter', 'Noto Sans JP', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* stars */
+        .stars {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .star {
+            position: absolute;
+            border-radius: 50%;
+            background: #fff;
+            animation: twinkle var(--dur, 3s) ease-in-out infinite;
+        }
+
+        @keyframes twinkle {
+
+            0%,
+            100% {
+                opacity: 0.1;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 0.8;
+                transform: scale(1.3);
+            }
+        }
+
+        /* grid lines */
+        .grid-bg {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            background-image: linear-gradient(rgba(124, 109, 250, 0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(124, 109, 250, 0.06) 1px, transparent 1px);
+            background-size: 60px 60px;
+        }
+
+        .layout {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* sidebar */
+        .sidebar {
+            width: 260px;
+            flex-shrink: 0;
+            padding: 32px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            border-right: 1px solid rgba(124, 109, 250, 0.15);
+            background: linear-gradient(180deg, rgba(8, 12, 26, 0.95) 0%, rgba(14, 20, 40, 0.95) 100%);
+        }
+
+        .logo-wrap {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding-bottom: 28px;
+            border-bottom: 1px solid rgba(124, 109, 250, 0.15);
+            margin-bottom: 28px;
+        }
+
+        .logo-orb {
+            width: 44px;
+            height: 44px;
+            border-radius: 14px;
+            background: linear-gradient(135deg, var(--accent), var(--neon));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            box-shadow: 0 0 24px var(--glow), 0 0 48px var(--neon-glow);
+        }
+
+        .logo-name {
+            font-size: 18px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            background: linear-gradient(90deg, var(--accent2), var(--neon));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .logo-sub {
+            font-size: 11px;
+            color: var(--text3);
+            margin-top: 2px;
+        }
+
+        .nav-section {
+            font-size: 10px;
+            font-weight: 600;
+            color: var(--text3);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            padding: 0 8px;
+            margin-bottom: 8px;
+        }
+
+        .nav-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 11px 14px;
+            border-radius: 12px;
+            color: var(--text2);
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 500;
+            margin-bottom: 4px;
+            transition: all 0.2s;
+            cursor: pointer;
+            border: 1px solid transparent;
+        }
+
+        .nav-item.active {
+            background: rgba(124, 109, 250, 0.15);
+            border-color: rgba(124, 109, 250, 0.3);
+            color: var(--accent2);
+        }
+
+        .nav-icon {
+            font-size: 16px;
+            width: 20px;
+            text-align: center;
+        }
+
+        .sidebar-spacer {
+            flex: 1;
+        }
+
+        .stats-panel {
+            background: rgba(124, 109, 250, 0.08);
+            border: 1px solid rgba(124, 109, 250, 0.15);
+            border-radius: 14px;
+            padding: 16px;
+        }
+
+        .stat-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 6px 0;
+            font-size: 12px;
+        }
+
+        .stat-row:not(:last-child) {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .stat-label {
+            color: var(--text3);
+        }
+
+        .stat-val {
+            color: var(--accent2);
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        /* main */
+        .main {
+            flex: 1;
+            padding: 48px 56px;
+            overflow-y: auto;
+        }
+
+        /* hero */
+        .hero {
+            margin-bottom: 56px;
+            position: relative;
+        }
+
+        .hero-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(0, 229, 255, 0.08);
+            border: 1px solid rgba(0, 229, 255, 0.2);
+            border-radius: 20px;
+            padding: 5px 14px;
+            font-size: 11px;
+            color: var(--neon);
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            margin-bottom: 20px;
+        }
+
+        .hero-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--neon);
+            box-shadow: 0 0 8px var(--neon);
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.4;
+            }
+        }
+
+        .hero-title {
+            font-size: 52px;
+            font-weight: 800;
+            letter-spacing: -2px;
+            line-height: 1.1;
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, #fff 0%, var(--accent2) 50%, var(--neon) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-sub {
+            font-size: 16px;
+            color: var(--text2);
+            max-width: 560px;
+            line-height: 1.7;
+            margin-bottom: 32px;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            padding: 14px 32px;
+            border-radius: 12px;
+            border: none;
+            font-family: inherit;
+            font-size: 15px;
+            font-weight: 700;
+            cursor: pointer;
+            background: linear-gradient(135deg, var(--accent), var(--neon));
+            color: #fff;
+            box-shadow: 0 8px 32px var(--glow);
+            transition: all 0.3s;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 40px var(--glow);
+        }
+
+        .btn-secondary {
+            padding: 14px 32px;
+            border-radius: 12px;
+            border: 1px solid rgba(124, 109, 250, 0.3);
+            font-family: inherit;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            background: rgba(124, 109, 250, 0.08);
+            color: var(--accent2);
+            transition: all 0.3s;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(124, 109, 250, 0.15);
+            border-color: rgba(124, 109, 250, 0.5);
+        }
+
+        /* metrics row */
+        .metrics {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-bottom: 40px;
+        }
+
+        .metric-card {
+            background: rgba(14, 20, 40, 0.8);
+            border: 1px solid rgba(124, 109, 250, 0.12);
+            border-radius: 16px;
+            padding: 20px 24px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+
+        .metric-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 16px;
+            background: linear-gradient(135deg, rgba(124, 109, 250, 0.05), transparent);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .metric-card:hover {
+            border-color: rgba(124, 109, 250, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .metric-card:hover::before {
+            opacity: 1;
+        }
+
+        .metric-icon {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .metric-num {
+            font-size: 32px;
+            font-weight: 800;
+            letter-spacing: -1px;
+            background: linear-gradient(135deg, #fff, var(--accent2));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .metric-label {
+            font-size: 12px;
+            color: var(--text3);
+            margin-top: 4px;
+        }
+
+        /* map section */
+        .section-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-line {
+            height: 2px;
+            width: 32px;
+            background: linear-gradient(90deg, var(--accent), transparent);
+            border-radius: 2px;
+        }
+
+        .region-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .region-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .region-name {
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--text3);
+            width: 40px;
+            flex-shrink: 0;
+        }
+
+        .chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .chip {
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 500;
+            cursor: pointer;
+            background: rgba(14, 20, 40, 0.8);
+            border: 1px solid rgba(124, 109, 250, 0.15);
+            color: var(--text2);
+            transition: all 0.2s;
+        }
+
+        .chip:hover {
+            background: rgba(124, 109, 250, 0.15);
+            border-color: rgba(124, 109, 250, 0.4);
+            color: var(--accent2);
+            box-shadow: 0 0 12px rgba(124, 109, 250, 0.2);
+        }
+
+        .design-label {
+            position: fixed;
+            top: 16px;
+            right: 16px;
+            background: rgba(0, 229, 255, 0.1);
+            border: 1px solid rgba(0, 229, 255, 0.3);
+            border-radius: 8px;
+            padding: 6px 14px;
+            font-size: 12px;
+            color: var(--neon);
+            font-weight: 600;
+            z-index: 100;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="design-label">案A: Stellar</div>
+    <div class="stars" id="stars"></div>
+    <div class="grid-bg"></div>
+    <div class="layout">
+        <aside class="sidebar">
+            <div class="logo-wrap">
+                <div class="logo-orb">🧠</div>
+                <div>
+                    <div class="logo-name">Persona AI</div>
+                    <div class="logo-sub">Virtual Simulation System</div>
+                </div>
+            </div>
+            <div class="nav-section">メインメニュー</div>
+            <a class="nav-item active"><span class="nav-icon">🗾</span> ダッシュボード</a>
+            <a class="nav-item"><span class="nav-icon">📡</span> 一括質問</a>
+            <div class="sidebar-spacer"></div>
+            <div class="stats-panel">
+                <div class="stat-row"><span class="stat-label">総ペルソナ数</span><span class="stat-val">470</span></div>
+                <div class="stat-row"><span class="stat-label">都道府県</span><span class="stat-val">47</span></div>
+                <div class="stat-row"><span class="stat-label">API残量</span><span class="stat-val">1,500</span></div>
+            </div>
+        </aside>
+        <main class="main">
+            <div class="hero">
+                <div class="hero-eyebrow">
+                    <div class="hero-dot"></div>LIVE SIMULATION
+                </div>
+                <h1 class="hero-title">470人の日本人と<br>対話できる</h1>
+                <p class="hero-sub">47都道府県に暮らすリアルな仮想ペルソナ。年齢・職業・収入・価値観まで統計データから生成。あなたの質問に一人ひとりが答えます。</p>
+                <div class="hero-actions">
+                    <button class="btn-primary">📡 全員に質問する</button>
+                    <button class="btn-secondary">🗾 ペルソナを選ぶ</button>
+                </div>
+            </div>
+            <div class="metrics">
+                <div class="metric-card">
+                    <div class="metric-icon">👥</div>
+                    <div class="metric-num">470</div>
+                    <div class="metric-label">総ペルソナ数</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon">🗾</div>
+                    <div class="metric-num">47</div>
+                    <div class="metric-label">対応都道府県</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon">⚡</div>
+                    <div class="metric-num">15</div>
+                    <div class="metric-label">RPM（毎分処理数）</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon">🎯</div>
+                    <div class="metric-num">10</div>
+                    <div class="metric-label">県あたりペルソナ数</div>
+                </div>
+            </div>
+            <div class="section-header">
+                <div class="section-title">🗾 都道府県マップ <div class="section-line"></div>
+                </div>
+            </div>
+            <div class="region-grid">
+                <div class="region-row">
+                    <div class="region-name">北海道</div>
+                    <div class="chips"><span class="chip">北海道</span></div>
+                </div>
+                <div class="region-row">
+                    <div class="region-name">東北</div>
+                    <div class="chips"><span class="chip">青森県</span><span class="chip">岩手県</span><span
+                            class="chip">宮城県</span><span class="chip">秋田県</span><span class="chip">山形県</span><span
+                            class="chip">福島県</span></div>
+                </div>
+                <div class="region-row">
+                    <div class="region-name">関東</div>
+                    <div class="chips"><span class="chip">茨城県</span><span class="chip">栃木県</span><span
+                            class="chip">群馬県</span><span class="chip">埼玉県</span><span class="chip">千葉県</span><span
+                            class="chip">東京都</span><span class="chip">神奈川県</span></div>
+                </div>
+                <div class="region-row">
+                    <div class="region-name">中部</div>
+                    <div class="chips"><span class="chip">新潟県</span><span class="chip">富山県</span><span
+                            class="chip">石川県</span><span class="chip">福井県</span><span class="chip">山梨県</span><span
+                            class="chip">長野県</span><span class="chip">岐阜県</span><span class="chip">静岡県</span><span
+                            class="chip">愛知県</span></div>
+                </div>
+                <div class="region-row">
+                    <div class="region-name">近畿</div>
+                    <div class="chips"><span class="chip">三重県</span><span class="chip">滋賀県</span><span
+                            class="chip">京都府</span><span class="chip">大阪府</span><span class="chip">兵庫県</span><span
+                            class="chip">奈良県</span><span class="chip">和歌山県</span></div>
+                </div>
+                <div class="region-row">
+                    <div class="region-name">中国</div>
+                    <div class="chips"><span class="chip">鳥取県</span><span class="chip">島根県</span><span
+                            class="chip">岡山県</span><span class="chip">広島県</span><span class="chip">山口県</span></div>
+                </div>
+                <div class="region-row">
+                    <div class="region-name">四国</div>
+                    <div class="chips"><span class="chip">徳島県</span><span class="chip">香川県</span><span
+                            class="chip">愛媛県</span><span class="chip">高知県</span></div>
+                </div>
+                <div class="region-row">
+                    <div class="region-name">九州</div>
+                    <div class="chips"><span class="chip">福岡県</span><span class="chip">佐賀県</span><span
+                            class="chip">長崎県</span><span class="chip">熊本県</span><span class="chip">大分県</span><span
+                            class="chip">宮崎県</span><span class="chip">鹿児島県</span><span class="chip">沖縄県</span></div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script>
+        const s = document.getElementById('stars');
+        for (let i = 0; i < 120; i++) {
+            const d = document.createElement('div'); d.className = 'star';
+            d.style.cssText = `width:${Math.random() * 2.5 + 0.5}px;height:${Math.random() * 2.5 + 0.5}px;top:${Math.random() * 100}%;left:${Math.random() * 100}%;--dur:${Math.random() * 4 + 2}s;animation-delay:${Math.random() * 5}s;`;
+            s.appendChild(d);
+        }
+    </script>
+</body>
+
+</html>
