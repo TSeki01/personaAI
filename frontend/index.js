@@ -4,10 +4,51 @@ let profileCache = {}; // persona_id -> PersonaProfile
 let selectedChip = null;
 let currentPersonaId = null;
 
+// ── 起動中バナー ──────────────────────────────────────────────────
+function showWakingBanner(attempt, max) {
+  let banner = document.getElementById('waking-banner');
+  if (!banner) {
+    banner = document.createElement('div');
+    banner.id = 'waking-banner';
+    Object.assign(banner.style, {
+      position: 'fixed', top: '0', left: '0', right: '0', zIndex: '9999',
+      background: 'linear-gradient(90deg,#6c47ff,#00c6ff)',
+      color: '#fff', textAlign: 'center', padding: '10px 16px',
+      fontSize: '14px', fontWeight: '600', letterSpacing: '0.03em',
+      boxShadow: '0 2px 12px rgba(0,0,0,0.3)'
+    });
+    document.body.prepend(banner);
+  }
+  const dots = '.'.repeat((attempt % 3) + 1) + '\u00a0'.repeat(3 - (attempt % 3));
+  banner.textContent =
+    `🚀 バックエンドを起動中${dots}  (${attempt}/${max}回目 — Renderの無料プランは初回約50秒かかります)`;
+}
+function hideWakingBanner() {
+  const b = document.getElementById('waking-banner');
+  if (b) { b.style.transition = 'opacity 0.6s'; b.style.opacity = '0'; setTimeout(() => b.remove(), 700); }
+}
+
 async function init() {
   buildMap();
+
+  // バックエンドが起きているか確認し、起きていなければ待つ
+  const alive = await wakeBackend({
+    onWaking: (attempt, max) => {
+      showWakingBanner(attempt, max);
+      document.getElementById('total-count').textContent = '起動中…';
+    },
+    onReady: hideWakingBanner,
+  });
+
+  if (!alive) {
+    document.getElementById('total-count').textContent = '接続失敗';
+    showWakingBanner(12, 12);
+    document.getElementById('waking-banner').textContent =
+      '⚠️ バックエンドに接続できませんでした。しばらくしてページをリロードしてください。';
+    return;
+  }
+
   try {
-    // 軽量エンドポイントでカウントだけ取得
     const data = await fetchPrefectures();
     const total = Object.values(data.prefectures).reduce((a, b) => a + b, 0);
     document.getElementById('total-count').textContent = total;

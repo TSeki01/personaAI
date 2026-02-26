@@ -4,6 +4,23 @@
 const _scriptEl = document.currentScript || document.querySelector('script[data-api-url]');
 const API_BASE = (_scriptEl && _scriptEl.dataset.apiUrl) || 'http://127.0.0.1:8000';
 
+// ── コールドスタート対応: バックエンドが起きるまでリトライ ──────────
+// onWaking(attempt, maxAttempts) … 起動待ち中に毎回呼ばれる
+// onReady()                      … 成功時に呼ばれる
+async function wakeBackend({ onWaking, onReady } = {}) {
+  const MAX = 12;          // 最大試行回数（約2分）
+  const INTERVAL = 10000;  // 10秒おき
+
+  for (let i = 1; i <= MAX; i++) {
+    try {
+      const res = await fetch(`${API_BASE}/api/usage`, { signal: AbortSignal.timeout(8000) });
+      if (res.ok) { if (onReady) onReady(); return true; }
+    } catch (_) { /* タイムアウト or ネットワークエラー → 再試行 */ }
+    if (onWaking) onWaking(i, MAX);
+    if (i < MAX) await new Promise(r => setTimeout(r, INTERVAL));
+  }
+  return false; // 起動失敗
+}
 
 async function fetchPersonas(prefecture = null, region = null) {
   const params = new URLSearchParams();
