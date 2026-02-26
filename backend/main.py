@@ -105,7 +105,7 @@ async def enhance_profile(persona_id: str):
     if not p:
         raise HTTPException(status_code=404, detail="Persona not found")
     profile = generate_persona_profile(p)
-    model_name = os.getenv("GEMINI_MODEL", "gemini-2.0-flash")
+    model_name = os.getenv("GEMINI_MODEL", "gemini-1.5-flash")
     try:
         narrative = await enhance_persona_profile(p, profile, model_name)
     except Exception as e:
@@ -154,7 +154,7 @@ async def interview(persona_id: str, req: InterviewRequest):
     # ライフログ+心理プロファイルを自動生成してシステムプロンプトに注入
     profile = generate_persona_profile(p)
 
-    model_name = os.getenv("GEMINI_MODEL", "gemini-2.0-flash")
+    model_name = os.getenv("GEMINI_MODEL", "gemini-1.5-flash")
     try:
         answer = await ask_persona_with_history(p, req.message, req.history, model_name, profile)
     except Exception as e:
