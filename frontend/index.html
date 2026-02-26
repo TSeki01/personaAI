@@ -56,6 +56,25 @@
             <span>残: <span id="usage-remain" style="color:var(--green);font-weight:600">--</span></span>
           </div>
         </div>
+
+        <!-- バックエンドステータス -->
+        <div style="margin-top:16px;padding-top:14px;border-top:1px solid rgba(255,255,255,0.07)">
+          <div style="display:flex;align-items:center;justify-content:space-between">
+            <span style="font-size:11px;color:var(--text3);letter-spacing:0.05em;text-transform:uppercase">サーバー</span>
+            <span id="backend-status-badge" style="
+              display:inline-flex;align-items:center;gap:5px;
+              font-size:12px;font-weight:600;
+              padding:3px 9px;border-radius:20px;
+              background:rgba(255,255,255,0.07);color:var(--text3);
+              transition:all 0.4s ease
+            ">
+              <span id="backend-status-dot"
+                style="width:7px;height:7px;border-radius:50%;background:var(--text3);flex-shrink:0"></span>
+              <span id="backend-status-text">確認中…</span>
+            </span>
+          </div>
+        </div>
+
       </div>
     </aside>
 

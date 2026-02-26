@@ -28,19 +28,52 @@ function hideWakingBanner() {
   if (b) { b.style.transition = 'opacity 0.6s'; b.style.opacity = '0'; setTimeout(() => b.remove(), 700); }
 }
 
+// ── バックエンドステータスバッジ ───────────────────────────────────
+function setBackendStatus(state) {
+  // state: 'checking' | 'online' | 'waking' | 'offline'
+  const badge = document.getElementById('backend-status-badge');
+  const dot = document.getElementById('backend-status-dot');
+  const text = document.getElementById('backend-status-text');
+  if (!badge) return;
+
+  const config = {
+    checking: { label: '確認中…', dotColor: 'var(--text3)', bg: 'rgba(255,255,255,0.07)', color: 'var(--text3)', anim: false },
+    online: { label: 'オンライン', dotColor: '#22c55e', bg: 'rgba(34,197,94,0.15)', color: '#22c55e', anim: false },
+    waking: { label: '起動中…', dotColor: '#f59e0b', bg: 'rgba(245,158,11,0.15)', color: '#f59e0b', anim: true },
+    offline: { label: 'オフライン', dotColor: '#ef4444', bg: 'rgba(239,68,68,0.15)', color: '#ef4444', anim: false },
+  }[state] || config.checking;
+
+  dot.style.background = config.dotColor;
+  dot.style.animation = config.anim ? 'pulse 1.2s ease-in-out infinite' : 'none';
+  badge.style.background = config.bg;
+  badge.style.color = config.color;
+  text.textContent = config.label;
+}
+
+// パルスアニメーション（起動中ドット点滅）
+if (!document.getElementById('_pulse_style')) {
+  const s = document.createElement('style');
+  s.id = '_pulse_style';
+  s.textContent = '@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.4;transform:scale(0.7)}}';
+  document.head.appendChild(s);
+}
+
 async function init() {
   buildMap();
+  setBackendStatus('checking');
 
   // バックエンドが起きているか確認し、起きていなければ待つ
   const alive = await wakeBackend({
     onWaking: (attempt, max) => {
       showWakingBanner(attempt, max);
+      setBackendStatus('waking');
       document.getElementById('total-count').textContent = '起動中…';
     },
-    onReady: hideWakingBanner,
+    onReady: () => { hideWakingBanner(); setBackendStatus('online'); },
   });
 
   if (!alive) {
+    setBackendStatus('offline');
     document.getElementById('total-count').textContent = '接続失敗';
     showWakingBanner(12, 12);
     document.getElementById('waking-banner').textContent =
@@ -76,7 +109,10 @@ async function updateUsage() {
     rpm.textContent = u.rpm_current;
     remain.textContent = u.requests_remaining_today;
     remain.style.color = u.requests_remaining_today < 100 ? 'var(--red)' : 'var(--green)';
-  } catch { }
+    setBackendStatus('online'); // ポーリング成功 → オンライン
+  } catch {
+    setBackendStatus('offline'); // ポーリング失敗 → オフライン
+  }
 }
 
 function selectPrefecture(pref, chip) {
