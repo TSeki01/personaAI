@@ -11,7 +11,7 @@ services:
       - key: GEMINI_API_KEY
         sync: false          # Renderダッシュボードで手動設定（シークレット）
       - key: GEMINI_MODEL
-        value: gemini-1.5-flash
+        value: gemini-2.5-flash
       - key: BULK_CONCURRENCY
         value: "3"
       - key: FRONTEND_ORIGIN
