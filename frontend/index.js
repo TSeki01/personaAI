@@ -136,7 +136,7 @@ async function showPersonasForPref(pref) {
   const grid = document.getElementById('persona-grid');
   const title = document.getElementById('panel-title');
 
-  title.textContent = `${pref}のペルソナ（読込中...）`;
+  title.textContent = `${pref}在住のペルソナ（読込中...）`;
   grid.innerHTML = '<div style="color:var(--text3);padding:20px">読み込み中...</div>';
   panel.style.display = 'block';
   panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
@@ -148,7 +148,7 @@ async function showPersonasForPref(pref) {
   }
   const personas = personaCache[pref];
 
-  title.textContent = `${pref}のペルソナ（${personas.length}人）`;
+  title.textContent = `${pref}在住のペルソナ（${personas.length}人）`;
   grid.innerHTML = '';
   personas.forEach(p => {
     const card = createPersonaCard(p);
