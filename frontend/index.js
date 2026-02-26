@@ -31,23 +31,26 @@ function hideWakingBanner() {
 // ── バックエンドステータスバッジ ───────────────────────────────────
 function setBackendStatus(state) {
   // state: 'checking' | 'online' | 'waking' | 'offline'
-  const badge = document.getElementById('backend-status-badge');
-  const dot = document.getElementById('backend-status-dot');
-  const text = document.getElementById('backend-status-text');
-  if (!badge) return;
-
   const config = {
     checking: { label: '確認中…', dotColor: 'var(--text3)', bg: 'rgba(255,255,255,0.07)', color: 'var(--text3)', anim: false },
     online: { label: 'オンライン', dotColor: '#22c55e', bg: 'rgba(34,197,94,0.15)', color: '#22c55e', anim: false },
     waking: { label: '起動中…', dotColor: '#f59e0b', bg: 'rgba(245,158,11,0.15)', color: '#f59e0b', anim: true },
     offline: { label: 'オフライン', dotColor: '#ef4444', bg: 'rgba(239,68,68,0.15)', color: '#ef4444', anim: false },
-  }[state] || config.checking;
+  }[state];
+  if (!config) return;
 
-  dot.style.background = config.dotColor;
-  dot.style.animation = config.anim ? 'pulse 1.2s ease-in-out infinite' : 'none';
-  badge.style.background = config.bg;
-  badge.style.color = config.color;
-  text.textContent = config.label;
+  // 上部・下部の両バッジを同時更新
+  ['', '-top'].forEach(suffix => {
+    const badge = document.getElementById(`backend-status-badge${suffix}`);
+    const dot = document.getElementById(`backend-status-dot${suffix}`);
+    const text = document.getElementById(`backend-status-text${suffix}`);
+    if (!badge) return;
+    dot.style.background = config.dotColor;
+    dot.style.animation = config.anim ? 'pulse 1.2s ease-in-out infinite' : 'none';
+    badge.style.background = config.bg;
+    badge.style.color = config.color;
+    text.textContent = config.label;
+  });
 }
 
 // パルスアニメーション（起動中ドット点滅）
