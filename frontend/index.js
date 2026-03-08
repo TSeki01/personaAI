@@ -129,6 +129,62 @@ function selectPrefecture(pref, chip) {
   chip.classList.add('selected');
   selectedChip = pref;
   showPersonasForPref(pref);
+  loadAndRenderStats(pref);
+}
+
+async function loadAndRenderStats(pref) {
+  const panel = document.getElementById('stats-panel');
+  const content = document.getElementById('stats-content');
+  const title = document.getElementById('stats-title');
+
+  if (!panel) return;
+
+  panel.style.display = 'block';
+  title.textContent = `${pref}の統計`;
+  content.innerHTML = '<div style="color:var(--text3);padding:20px;text-align:center">統計データを読込中...</div>';
+
+  try {
+    const stats = await fetchStats(pref);
+    renderStats(pref, stats);
+  } catch (e) {
+    content.innerHTML = `<div style="color:var(--red);padding:20px;text-align:center">統計の取得に失敗しました</div>`;
+    console.error(e);
+  }
+}
+
+function renderStats(pref, data) {
+  const content = document.getElementById('stats-content');
+
+  const industries = data.major_industries.map(ind => `<span class="industry-tag">${ind}</span>`).join('');
+
+  content.innerHTML = `
+    <div class="stat-group">
+      <div class="stat-label">平均年収</div>
+      <div class="stat-value">${data.avg_annual_income}<span class="stat-small"> 万円</span></div>
+    </div>
+    <div class="stat-group">
+      <div class="stat-label">持ち家率</div>
+      <div class="stat-value">${(data.homeownership_rate * 100).toFixed(1)}<span class="stat-small"> %</span></div>
+    </div>
+    <div class="stat-group">
+      <div class="stat-label">平均通勤時間</div>
+      <div class="stat-value">${data.avg_commute_minutes}<span class="stat-small"> 分</span></div>
+    </div>
+    <div class="stat-group">
+      <div class="stat-label">主要産業</div>
+      <div class="industry-tags">
+        ${industries}
+      </div>
+    </div>
+    <div class="stat-group" style="margin-top:10px; padding-top:10px; border-top:1px solid var(--border)">
+      <div class="stat-label">生活費目安（月）</div>
+      <div style="font-size:13px; color:var(--text2)">
+        食費: ${data.avg_monthly_food.toLocaleString()}円<br>
+        住居: ${data.avg_monthly_housing.toLocaleString()}円<br>
+        娯楽: ${data.avg_monthly_entertainment.toLocaleString()}円
+      </div>
+    </div>
+  `;
 }
 
 async function showPersonasForPref(pref) {
@@ -332,6 +388,7 @@ function closeModal() {
 
 function closePanel() {
   document.getElementById('persona-panel').style.display = 'none';
+  document.getElementById('stats-panel').style.display = 'none';
 }
 
 init();

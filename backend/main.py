@@ -84,6 +84,19 @@ def get_prefectures():
             regions[p.region].append(p.prefecture)
     return {"prefectures": dict(counts), "regions": regions}
 
+@app.get("/api/stats/{prefecture}")
+def get_stats(prefecture: str):
+    """指定された都道府県の統計データを返す"""
+    try:
+        with open(STATS_PATH, "r", encoding="utf-8") as f:
+            all_stats = json.load(f)
+        stats = all_stats.get(prefecture)
+        if not stats:
+            raise HTTPException(status_code=404, detail="Stats not found")
+        return stats
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
 @app.get("/api/usage")
 def get_usage():
     """Gemini API使用量と残量を返す"""

@@ -104,8 +104,25 @@
         <div class="region-filter" id="region-filter"></div>
       </header>
 
-      <!-- 日本地図（地域グリッド） -->
-      <div class="japan-map" id="japan-map"></div>
+      <!-- マップと統計のエリア -->
+      <div class="map-stats-container">
+        <!-- 日本地図（地域グリッド） -->
+        <div class="japan-map" id="japan-map"></div>
+
+        <!-- 統計パネル（PCブラウザ用） -->
+        <div class="stats-panel" id="stats-panel" style="display:none">
+          <div class="stats-header">
+            <h2 id="stats-title">統計データ</h2>
+            <div class="stats-subtitle">都道府県を選択してください</div>
+          </div>
+          <div id="stats-content" class="stats-content">
+            <div class="stats-placeholder">
+              <div class="placeholder-icon">📊</div>
+              <p>都道府県を選択すると<br>統計データが表示されます</p>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <!-- ペルソナパネル -->
       <div class="persona-panel" id="persona-panel" style="display:none">
@@ -131,7 +148,7 @@
 
   <script src="api.js" data-api-url="https://persona-api-qddk.onrender.com"></script>
   <script src="map.js"></script>
-  <script src="index.js"></script>
+  <script src="index.js?v=2"></script>
 </body>
 
 </html>

@@ -168,11 +168,127 @@ body {
 }
 
 /* ── Japan Map ────────────────────────────────────── */
+.map-stats-container {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+  margin-bottom: 32px;
+}
+
 .japan-map {
+  flex: 1;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
   gap: 8px;
-  margin-bottom: 32px;
+}
+
+.stats-panel {
+  width: 320px;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  flex-shrink: 0;
+  position: sticky;
+  top: 20px;
+  animation: slideInRight 0.3s ease;
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.stats-header {
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--border);
+}
+
+.stats-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.stats-subtitle {
+  font-size: 12px;
+  color: var(--text3);
+}
+
+.stats-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.stat-group {
+  margin-bottom: 12px;
+}
+
+.stat-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text3);
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.stat-value {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.stat-small {
+  font-size: 13px;
+  color: var(--text2);
+}
+
+.stats-placeholder {
+  text-align: center;
+  padding: 40px 0;
+  color: var(--text3);
+}
+
+.placeholder-icon {
+  font-size: 32px;
+  margin-bottom: 12px;
+  opacity: 0.5;
+}
+
+.industry-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.industry-tag {
+  font-size: 11px;
+  padding: 3px 8px;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--text2);
+}
+
+@media (max-width: 1024px) {
+  .map-stats-container {
+    flex-direction: column;
+  }
+
+  .stats-panel {
+    width: 100%;
+    position: static;
+  }
 }
 
 .region-section {
