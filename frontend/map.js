@@ -36,7 +36,7 @@ function buildMap() {
 
         const title = document.createElement('div');
         title.className = 'region-title';
-        title.style.color = REGION_COLORS[region.name] || '#9097b5';
+        title.style.color = '#1a1a1a';
         title.textContent = `── ${region.name}`;
         section.appendChild(title);
 

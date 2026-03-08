@@ -8,21 +8,22 @@
 }
 
 :root {
-  --bg: #0d0f14;
-  --bg2: #13161e;
-  --bg3: #1a1e2a;
-  --bg4: #22273a;
-  --border: rgba(255, 255, 255, 0.08);
-  --accent: #6c63ff;
-  --accent2: #a78bfa;
-  --accent-glow: rgba(108, 99, 255, 0.3);
-  --text: #e8eaf6;
-  --text2: #9097b5;
-  --text3: #5c6380;
-  --green: #34d399;
-  --red: #f87171;
-  --yellow: #fbbf24;
-  --card-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+  --bg: #ffffff;
+  --bg2: #f8f9fa;
+  --bg3: #f1f3f5;
+  --bg4: #e9ecef;
+  --border: #dfdfdf;
+  --accent: #cb070a;
+  --accent2: #9a0712;
+  --accent-glow: rgba(203, 7, 10, 0.3);
+  --text: #1a1a1a;
+  --text2: #333333;
+  --text3: #666666;
+  --text-light: #dfdfdf;
+  --green: #10b981;
+  --red: #ef4444;
+  --yellow: #f59e0b;
+  --card-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
   --radius: 14px;
   --radius-sm: 8px;
 }
@@ -181,7 +182,7 @@ body {
 .region-title {
   font-size: 11px;
   font-weight: 600;
-  color: var(--text3);
+  color: #1a1a1a;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   margin-bottom: 8px;
@@ -225,7 +226,7 @@ body {
 .pref-chip.selected {
   background: var(--accent);
   border-color: var(--accent);
-  color: white;
+  color: var(--text-light);
   box-shadow: 0 4px 16px var(--accent-glow);
 }
 
@@ -553,7 +554,7 @@ body {
 
 .btn-primary {
   background: linear-gradient(135deg, var(--accent), var(--accent2));
-  color: white;
+  color: var(--text-light);
   box-shadow: 0 4px 16px var(--accent-glow);
 }
 
@@ -872,7 +873,7 @@ body {
 
 .message.user .msg-bubble {
   background: linear-gradient(135deg, var(--accent), var(--accent2));
-  color: white;
+  color: var(--text-light);
   border-radius: 18px 4px 18px 18px;
 }
 
