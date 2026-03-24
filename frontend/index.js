@@ -212,6 +212,7 @@ async function showPersonasForPref(pref) {
   });
 }
 
+
 function createPersonaCard(p) {
   const div = document.createElement('div');
   div.className = 'persona-card';

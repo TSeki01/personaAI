@@ -66,6 +66,12 @@ async function fetchStats(prefecture) {
   return res.json();
 }
 
+async function fetchStats(prefecture) {
+  const res = await fetch(`${API_BASE}/api/stats/${encodeURIComponent(prefecture)}`);
+  if (!res.ok) throw new Error('統計データの取得に失敗しました');
+  return res.json();
+}
+
 async function fetchUsage() {
   const res = await fetch(`${API_BASE}/api/usage`);
   return res.json();
